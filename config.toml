@@ -1,0 +1,10 @@
+baseURL = 'http://kliiu.github.io'
+languageCode = 'en-us'
+title = 'My Nonsense'
+theme = "base16"
+
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  category = "categories"

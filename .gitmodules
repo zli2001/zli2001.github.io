@@ -1,0 +1,3 @@
+[submodule "themes/dusky-neon-potato"]
+	path = themes/dusky-neon-potato
+	url = https://github.com/VVelox/hugo-dusky-neon-potato.git
