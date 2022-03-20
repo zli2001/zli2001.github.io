@@ -3,10 +3,13 @@ title: "Hello Hugo"
 date: 2022-03-19T15:06:09+08:00
 draft: false
 tags: [“hugo"]
+series: ["Blog美化"]
 categories: ["Coding"]
 ---
 
 Hello World! Hello Hugo!
+
+<!--more-->
 
 ### Hugo发布步骤：
 
@@ -27,3 +30,14 @@ Hello World! Hello Hugo!
 > ```git commit -m "new blog added"```
 > 
 > ```git push ```
+
+### 改为部署在docs文件夹后的步骤
+
+> 打包
+> 
+> ```hugo -d docs```
+> 
+> push整个文件夹
+> 
+>  ...
+> 
