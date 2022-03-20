@@ -1,6 +1,6 @@
 baseURL = 'http://kliiu.github.io'
 languageCode = 'en-us'
-title = 'My Nonsense'
+title = 'kliiu'
 theme = "base16"
 
 
