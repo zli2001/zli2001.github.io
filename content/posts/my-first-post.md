@@ -33,11 +33,11 @@ Hello World! Hello Hugo!
 
 ### 改为部署在docs文件夹后的步骤
 
-> 打包
+> ---打包
 > 
 > ```hugo -d docs```
 > 
-> push整个文件夹
+> ---push整个文件夹
 > 
 >  ...
 > 
