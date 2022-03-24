@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coding on kliiu</title>
-    <link>http://kliiu.github.io/categories/coding/</link>
-    <description>Recent content in Coding on kliiu</description>
+    <title>JavaLearning on kliiu</title>
+    <link>http://kliiu.github.io/series/javalearning/</link>
+    <description>Recent content in JavaLearning on kliiu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Mar 2022 17:13:25 +0800</lastBuildDate><atom:link href="http://kliiu.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2022 17:13:25 +0800</lastBuildDate><atom:link href="http://kliiu.github.io/series/javalearning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java构造函数默认参数</title>
       <link>http://kliiu.github.io/posts/java%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</link>
@@ -15,24 +15,6 @@
       <guid>http://kliiu.github.io/posts/java%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</guid>
       <description>java中的构造函数无指定默认参数功能，但可以通过方法重载实现：
 class Lader{  private double up, down, height, size;  double laderSize(){  //返回面积  size=(up+down)*height/2;  return size;  } //Java支持方法重载，间接实现构造函数默认参数， // 因此没有如C++中默认参数的功能  Lader(double u, double d){  up=u;  down=d;  }   Lader(double u, double d, double h){  up=u;  down=d;  height=h;  } }  public class LaderCircle{  Lader a = new Lader(1.0,2.0); } </description>
-    </item>
-    
-    <item>
-      <title>ReadMore</title>
-      <link>http://kliiu.github.io/posts/readmore/</link>
-      <pubDate>Sun, 20 Mar 2022 16:02:47 +0800</pubDate>
-      
-      <guid>http://kliiu.github.io/posts/readmore/</guid>
-      <description>&lt;p&gt;如何只显示部分内容，隐藏博客其他内容?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hello Hugo</title>
-      <link>http://kliiu.github.io/posts/my-first-post/</link>
-      <pubDate>Sat, 19 Mar 2022 15:06:09 +0800</pubDate>
-      
-      <guid>http://kliiu.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hello World! Hello Hugo!&lt;/p&gt;</description>
     </item>
     
   </channel>

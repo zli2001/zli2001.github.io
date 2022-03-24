@@ -10,7 +10,7 @@ categories: ["Coding"]
 
 
 java中的构造函数无指定默认参数功能，但可以通过方法重载实现：
-```javascript
+```C
 class  Lader{
     private double up, down, height, size;
         double laderSize(){
