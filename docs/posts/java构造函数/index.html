@@ -56,30 +56,30 @@
   <h1 class="headline" itemprop="headline">Java构造函数默认参数</h1>
   <section class="body" itemprop="articleBody">
     <p>java中的构造函数无指定默认参数功能，但可以通过方法重载实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>class  Lader{
-</span></span><span style="display:flex;"><span>    private <span style="color:#66d9ef">double</span> up, down, height, size;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">laderSize</span>(){
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span>  <span style="color:#a6e22e">Lader</span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> up<span style="color:#f92672">,</span> down<span style="color:#f92672">,</span> height<span style="color:#f92672">,</span> size<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">laderSize</span><span style="color:#f92672">(){</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">//返回面积
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        size<span style="color:#f92672">=</span>(up<span style="color:#f92672">+</span>down)<span style="color:#f92672">*</span>height<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> size;
-</span></span><span style="display:flex;"><span>    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        size<span style="color:#f92672">=(</span>up<span style="color:#f92672">+</span>down<span style="color:#f92672">)*</span>height<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> size<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//Java支持方法重载，间接实现构造函数默认参数，
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 因此没有如C++中默认参数的功能
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Lader(<span style="color:#66d9ef">double</span> u, <span style="color:#66d9ef">double</span> d){
-</span></span><span style="display:flex;"><span>        up<span style="color:#f92672">=</span>u;
-</span></span><span style="display:flex;"><span>        down<span style="color:#f92672">=</span>d;
-</span></span><span style="display:flex;"><span>    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Lader<span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> u<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> d<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        up<span style="color:#f92672">=</span>u<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        down<span style="color:#f92672">=</span>d<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Lader(<span style="color:#66d9ef">double</span> u, <span style="color:#66d9ef">double</span> d, <span style="color:#66d9ef">double</span> h){
-</span></span><span style="display:flex;"><span>        up<span style="color:#f92672">=</span>u;
-</span></span><span style="display:flex;"><span>        down<span style="color:#f92672">=</span>d;
-</span></span><span style="display:flex;"><span>        height<span style="color:#f92672">=</span>h;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    Lader<span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> u<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> d<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> h<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>        up<span style="color:#f92672">=</span>u<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        down<span style="color:#f92672">=</span>d<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        height<span style="color:#f92672">=</span>h<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public class LaderCircle{
-</span></span><span style="display:flex;"><span>    Lader a <span style="color:#f92672">=</span> new Lader(<span style="color:#ae81ff">1.0</span>,<span style="color:#ae81ff">2.0</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LaderCircle</span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    Lader a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Lader<span style="color:#f92672">(</span>1<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">,</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div>
   </section>
 </article>
