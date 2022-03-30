@@ -19,6 +19,8 @@
   --base0f: #d27b53;
 }
 
+
+
 .base00 { color: var(--base00); }
 .base01 { color: var(--base01); }
 .base02 { color: var(--base02); }
@@ -35,6 +37,7 @@
 .base0d { color: var(--base0d); }
 .base0e { color: var(--base0e); }
 .base0f { color: var(--base0f); }
+
 
 /* General Page Layout */
 
@@ -151,6 +154,8 @@ header a.path {
   color: var(--base05);
   font-size: 30;
 }
+
+
 
 header span.caret {
   color: var(--base07);
