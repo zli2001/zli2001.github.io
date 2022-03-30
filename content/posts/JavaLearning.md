@@ -7,6 +7,38 @@ series: ["JavaLearning"]
 categories: ["Coding"]
 ---
 <!--more-->
+
+## 类与对象
+### this
+表示某个对象，可以出现在实例方法和构造方法中
+### 局部变量
+- 局部变量没有默认值，必须初始化。
+- 成员变量有默认值，可以不初始化。
+### 实例成员与类成员
+用static 修饰的称作类变量、类方法（static 方法、静态方法）。可以通过类名调用
+
+类方法不能操作实例变量。在类创建对象之前实例成员还没有分配内存。
+也不能调用类中的实例方法
+
+其他则成为实例变量、实例方法。
+
+实例方法可以操作实例变量、类变量，调用实例方法、类方法（不包括构造方法）
+
+### 可变参数
+```java
+class E_4{
+
+    public static void main(String args[]){
+        f(1,2);
+        f(-2,-2,-3,-4);
+    }
+    public static void f(int ... x){//x是可变参数的代表，代表若干个int型参数
+        for(int i=0;i<x.length;i++)
+            System.out.println(x[i]);//类似数组，代表第i个参数
+    }
+}
+```
+
 ## Java Library
 ### ArrayList
 
