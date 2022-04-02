@@ -2,9 +2,9 @@
 title: "STL erase()用法"
 date: 2022-03-24T21:13:25+08:00
 draft: false
-tags: ["c++","code","STL"]
-series: ["C++"]
-categories: ["Coding"]
+tags: ["STL"]
+series: ["STL"]
+categories: ["STL"]
 ---
 C++ STL中erase有三种用法：
 <!--more-->
