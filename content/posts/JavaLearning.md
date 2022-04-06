@@ -145,7 +145,7 @@ super必须是子类构造方法的第一句
 - java不支持多重继承
 - 但是可以用`interface`实现多重继承的功能
 
-### 接口 interface
+## 接口 interface
 ```java
 public interface Pet{
     void beFriendly();
@@ -177,6 +177,11 @@ public class Dog extends Canine implements Pet{
 - 友好接口（不加public）只能被同包中的类实现
 - 父类实现接口即子类也实现了，不必再implements
 - 接口可以继承
+
+### 接口回调
+把接口实现的类创建的对象引用赋值给接口声明的变量，那么该接口变量可以调用被类实现的方法以及接口提供的default方法。
+
+
 ## 多态性
 - 静态多态性
 >方法重载
