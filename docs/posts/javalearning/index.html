@@ -180,6 +180,8 @@
 <h3 id="成员变量的隐藏与方法重写">成员变量的隐藏与方法重写</h3>
 <h4 id="成员变量的隐藏">成员变量的隐藏</h4>
 <p>子类声明的成员变量名字与从父类继承来的成员变量名字相同，类型可以不同</p>
+<p>子类继承的方法只能操作子类继承和隐藏的成员变量</p>
+<p>子类重写或新增的方法能操作子类继承和新声明的成员变量，不能操作隐藏的成员的变量</p>
 <h4 id="重写-override">重写 override</h4>
 <ul>
 <li>子类方法必须与父类保持类型一致，</li>
@@ -190,6 +192,7 @@
 <h3 id="super">super</h3>
 <p>super必须是子类构造方法的第一句</p>
 <p>调用被隐藏的成员变量与方法</p>
+<p>默认调用父类不带参数的构造方法</p>
 <h3 id="final">final</h3>
 <ul>
 <li>
@@ -228,7 +231,7 @@
 <li>java不支持多重继承</li>
 <li>但是可以用<code>interface</code>实现多重继承的功能</li>
 </ul>
-<h3 id="接口-interface">接口 interface</h3>
+<h2 id="接口-interface">接口 interface</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Pet</span><span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">beFriendly</span><span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">play</span><span style="color:#f92672">();</span>
@@ -259,58 +262,71 @@
 <li>重写default方法需要去掉default</li>
 <li>类不拥有接口的static方法和private方法</li>
 <li>除了private以外，其他方法默认为public，重写时不可省略，否则降低了访问权限</li>
+<li>abstract类可以选择性重写，非abstract类必须全部重写</li>
 </ul>
 <ol start="3">
-<li>使用接口中的常量和static方法</li>
-</ol>
-<ul>
 <li>可以用接口名访问接口的常量、调用接口中的static方法</li>
-</ul>
-<ol start="4">
 <li>接口的细节</li>
 </ol>
 <ul>
 <li>public接口可以被任意类实现（implements）</li>
 <li>友好接口（不加public）只能被同包中的类实现</li>
 <li>父类实现接口即子类也实现了，不必再implements</li>
+</ul>
+<h3 id="接口的继承">接口的继承</h3>
+<ul>
 <li>接口可以继承</li>
+<li>一个接口可以有多个父接口</li>
 </ul>
-<h2 id="多态性">多态性</h2>
-<ul>
-<li>静态多态性</li>
-</ul>
-<blockquote>
-<p>方法重载</p>
-</blockquote>
-<ul>
-<li>动态多态性</li>
-</ul>
-<blockquote>
-<p>将子类对象的引用放进父类：
-上转型对象a: 不能访问子类新增的方法和变量
-<code>A a = new B()//B为子类</code></p>
-</blockquote>
-<h2 id="抽象">抽象</h2>
-<h3 id="抽象类">抽象类</h3>
-<p>如Animals类。不应该被实例化，因此定义为抽象类，让其无法被new</p>
-<p>抽象类可以有抽象方法和非抽象方法</p>
-<h3 id="抽象方法">抽象方法</h3>
-<p>必须被重写的方法，which has no body!
-没有大括号</p>
-<p><code>public abstract void eat();</code></p>
-<ul>
-<li>
-<p>抽象方法必须放在抽象类里。</p>
-</li>
-<li>
-<p>必须重写所有的抽象方法</p>
-</li>
-<li>
-<p>为什么要有抽象方法？为了多态性，所有的子类都有这个方法</p>
-</li>
-</ul>
-<h2 id="异常处理">异常处理</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Com</span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> M<span style="color:#f92672">=</span>200<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ImpCom</span> <span style="color:#66d9ef">implements</span> Com<span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//错! 返回类型改变，参数类型未改变
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">6</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//正确
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> M<span style="color:#f92672">+</span>100<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span><span style="color:#960050;background-color:#1e0010">```</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">###</span> 接口回调
+</span></span><span style="display:flex;"><span>把接口实现的类创建的对象引用赋值给接口声明的变量<span style="color:#960050;background-color:#1e0010">，</span>那么该接口变量可以调用被类实现的方法以及接口提供的default方法<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> 多态性
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> 静态多态性
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span>方法重载
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> 动态多态性
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span>   将子类对象的引用放进父类<span style="color:#960050;background-color:#1e0010">：</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span>   上转型对象a<span style="color:#f92672">:</span> 不能访问子类新增的方法和变量
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span>   <span style="color:#960050;background-color:#1e0010">`</span>A a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> B<span style="color:#f92672">()</span><span style="color:#75715e">//B为子类`
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> 抽象
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">###</span> 抽象类
+</span></span><span style="display:flex;"><span>如Animals类<span style="color:#960050;background-color:#1e0010">。</span>不应该被实例化<span style="color:#960050;background-color:#1e0010">，</span>因此定义为抽象类<span style="color:#960050;background-color:#1e0010">，</span>让其无法被new
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>抽象类可以有抽象方法和非抽象方法
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">###</span> 抽象方法
+</span></span><span style="display:flex;"><span>必须被重写的方法<span style="color:#960050;background-color:#1e0010">，</span>which has no body<span style="color:#f92672">!</span>
+</span></span><span style="display:flex;"><span>没有大括号
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span><span style="color:#f92672">();</span><span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> 抽象方法必须放在抽象类里<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> 必须重写所有的抽象方法
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> 为什么要有抽象方法<span style="color:#960050;background-color:#1e0010">？</span>为了多态性<span style="color:#960050;background-color:#1e0010">，</span>所有的子类都有这个方法
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> 异常处理
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    turnOvenOn<span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>    x<span style="color:#f92672">.</span><span style="color:#a6e22e">bake</span><span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>BakingException ex<span style="color:#f92672">){</span>

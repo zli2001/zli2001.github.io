@@ -15,7 +15,8 @@ DECLARE StuCur SCROLL CURSOR --创建一个游标
 -- 不写SCROLL 静态游标，只能一步一步前进，不能后退
 FOR SELECT * FROM student
 FOR UPDATE OF email
-DECLARE @学号 char(10) @char(10)@...--定义一些变量，用来导出游标所指数据
+--锁字段 也就是从你select语句执行后 表的email 字段被锁定 别人将不能进行修改操作 直到你进行update commit后才能修改
+DECLARE @学号 char(10) @姓名char(10)@...--定义一些变量，用来导出游标所指数据
 --@xx 变量 @@xx 系统变量
 ```
 2. 打开游标
@@ -35,7 +36,7 @@ PRINT @...
 FETCH NEXT FROM stucur --静态只能用next
 --动态可以用PRIOR ,NEXT ,FIRST ,LAST ,ABSOLUTE ,RELATIVELY
 UPDATE student
-SET email='..' WHERE CURRENT OF student
+SET email='..' WHERE CURRENT OF StuCur
 ```
 4. 关闭释放游标
 ```sql

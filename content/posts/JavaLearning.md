@@ -105,6 +105,10 @@ class Average extends Sum{
 ### 成员变量的隐藏与方法重写
 #### 成员变量的隐藏
 子类声明的成员变量名字与从父类继承来的成员变量名字相同，类型可以不同
+
+子类继承的方法只能操作子类继承和隐藏的成员变量
+
+子类重写或新增的方法能操作子类继承和新声明的成员变量，不能操作隐藏的成员的变量
 #### 重写 override
 - 子类方法必须与父类保持类型一致，
 - 与重载 overload不同
@@ -114,6 +118,8 @@ class Average extends Sum{
 super必须是子类构造方法的第一句
 
 调用被隐藏的成员变量与方法
+
+默认调用父类不带参数的构造方法
 
 ### final
 - final类不能被继承
@@ -170,14 +176,32 @@ public class Dog extends Canine implements Pet{
 - 重写default方法需要去掉default
 - 类不拥有接口的static方法和private方法
 - 除了private以外，其他方法默认为public，重写时不可省略，否则降低了访问权限
-3. 使用接口中的常量和static方法
-- 可以用接口名访问接口的常量、调用接口中的static方法
+- abstract类可以选择性重写，非abstract类必须全部重写
+3. 可以用接口名访问接口的常量、调用接口中的static方法
 4. 接口的细节
 - public接口可以被任意类实现（implements）
 - 友好接口（不加public）只能被同包中的类实现
 - 父类实现接口即子类也实现了，不必再implements
-- 接口可以继承
 
+### 接口的继承
+- 接口可以继承
+- 一个接口可以有多个父接口
+```java
+interface Com{
+  int M=200;
+  int f();
+}
+class ImpCom implements Com{
+  //错! 返回类型改变，参数类型未改变
+  public double f(){
+  return 2.6;
+  }
+  
+  //正确
+  public int f(){
+  return M+100;
+  }
+}```
 ### 接口回调
 把接口实现的类创建的对象引用赋值给接口声明的变量，那么该接口变量可以调用被类实现的方法以及接口提供的default方法。
 
