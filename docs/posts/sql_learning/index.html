@@ -159,7 +159,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> prod_desc <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%toy%carrots%&#39;</span> ;
 </span></span></code></pre></div><h2 id="lesson-7-创建计算字段">Lesson 7 创建计算字段</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--拼接 +
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--拼接 + 或 ||
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> vend_name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">+</span> vend_country <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;)&#39;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Vendors
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> vend_name;
@@ -505,6 +505,57 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">AND</span> OrderItems.order_num<span style="color:#f92672">=</span>Orders.order_num 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">BY</span> Customers.cust_name
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">SUM</span>(quantity<span style="color:#f92672">*</span>item_price)<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">1000</span>;
+</span></span></code></pre></div><h2 id="lesson-18-视图">Lesson 18 视图</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--使用视图
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--视图是虚拟的表，包含一个查询
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--与表一样，视图必须唯一命名（不能给视图取与别的视图或表相同的 名字）。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--对于可以创建的视图数目没有限制。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--创建视图，必须具有足够的访问权限。这些权限通常由数据库管理人员授予。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--视图可以嵌套，即可以利用从其他视图中检索数据的查询来构造视图。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--所允许的嵌套层数在不同的DBMS中有所不同（嵌套视图可能会严重降低查询的性能，因此在产品环境中使用之前，应该对其进行全面测试）。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--限制和规则
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--许多DBMS禁止在视图查询中使用 ORDER BY 子句。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--18.2.1使用视图简化复杂的联结
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CREATE VIEW ProductCustomers AS --创建视图
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">SELECT cust_name, cust_contact, prod_id
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">FROM Customers, Orders, OrderItems
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">WHERE Customers.cust_id = Orders.cust_id
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">AND OrderItems.order_num = Orders.order_num;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--删除视图   DROP VIEW viewname;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--检索订购了产品 RGAN01 的顾客，可如下进行：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">SELECT cust_name, cust_contact
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">FROM ProductCustomers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">WHERE prod_id = &#39;RGAN01&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CREATE VIEW VendorLocations AS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">SELECT RTRIM(vend_name) + &#39; (&#39; + RTRIM(vend_country) + &#39;)&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">AS vend_title
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">FROM Vendors;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">SELECT * FROM VendorLocations;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--视图提供了一种封装 SELECT 语句的层次，可用来简化数据处理，重新 格式化或保护基础数据。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--18.4.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CREATE VIEW CustomersWithOrders AS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">SELECT Customers.cust_id,cust_name,cust_address,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">cust_city,cust_contact,cust_email,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">cust_state,cust_zip,cust_country
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">FROM Customers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">INNER JOIN Orders ON Orders.cust_id=Customers.cust_id
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> CustomersWithOrders
 </span></span></code></pre></div>
   </section>
 </article>

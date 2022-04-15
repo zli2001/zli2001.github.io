@@ -1,6 +1,6 @@
 ---
 title: "Java Learning"
-date: 2022-03-28T10:09:58+08:00
+date: 2022-04-15T10:09:58+08:00
 draft: false
 tags: ["java","code"]
 series: ["JavaLearning"]
@@ -73,6 +73,7 @@ class E_4{
 >
 - 多个argument
 - `format("The rank is %,d out of &,.2f",one,two);`
+  
     > The rank is 20,456,654 out of 100,567,890.25
 
 ## 子类与继承
@@ -145,7 +146,21 @@ super必须是子类构造方法的第一句
         }
     }
     ```
+## 抽象
+### 抽象类
+如Animals类。不应该被实例化，因此定义为抽象类，让其无法被new
 
+抽象类可以有抽象方法和非抽象方法
+### 抽象方法
+必须被重写的方法，which has no body!
+没有大括号
+
+`public abstract void eat();`
+
+- 抽象方法必须放在抽象类里。
+- 必须重写所有的抽象方法
+
+- 为什么要有抽象方法？为了多态性，所有的子类都有这个方法
 ### 上转型对象
 ### 多重继承
 - java不支持多重继承
@@ -162,6 +177,7 @@ public class Dog extends Canine implements Pet{
     //...
 }
 ```
+
 - 允许除了抽象方法和常量以外的：
 > default 实例方法（必须是public）（不可以省略default,可以省略public）
 > （不可以定义default的static方法）//jdk8
@@ -186,6 +202,7 @@ public class Dog extends Canine implements Pet{
 ### 接口的继承
 - 接口可以继承
 - 一个接口可以有多个父接口
+
 ```java
 interface Com{
   int M=200;
@@ -201,7 +218,8 @@ class ImpCom implements Com{
   public int f(){
   return M+100;
   }
-}```
+}
+```
 ### 接口回调
 把接口实现的类创建的对象引用赋值给接口声明的变量，那么该接口变量可以调用被类实现的方法以及接口提供的default方法。
 
@@ -214,26 +232,64 @@ class ImpCom implements Com{
 >   上转型对象a: 不能访问子类新增的方法和变量
 >   `A a = new B()//B为子类`
 
-## 抽象
-### 抽象类
-如Animals类。不应该被实例化，因此定义为抽象类，让其无法被new
-
-抽象类可以有抽象方法和非抽象方法
-### 抽象方法
-必须被重写的方法，which has no body!
-没有大括号
-
-`public abstract void eat();`
-
-- 抽象方法必须放在抽象类里。
-- 必须重写所有的抽象方法
-
-- 为什么要有抽象方法？为了多态性，所有的子类都有这个方法
 
 
 
 
-## 异常处理
+
+
+## 内部类和异常类
+
+### 内部类
+
+指一个类中定义的另一个类
+
+- 内部类中不可以声明类变量和类方法。
+
+- static内部类不能操作外嵌类中的实例变量成员
+
+### 匿名类
+- 匿名类一定是内部类，是在某个类中直接用匿名类创建对象。
+```java
+ abstract class Bank{
+    int money;
+    public Bank(){
+        money =100;
+    }
+    public Bank(int money){
+        this.money=money;
+    }
+    public abstract void output();
+}
+ class ShowBank{
+    void showMess(Bank bank){
+        bank.output();
+    }
+}
+class Example{
+    public static void main(String[] args) {
+        ShowBank showBank = new ShowBank();
+        showBank.showMess(new Bank() {//匿名类的类体
+            @Override
+            public void output() {
+                money += 100;
+                System.out.println(money);
+            }
+        });
+        showBank.showMess(new Bank(500) {//匿名类的类体
+            @Override
+            public void output() {
+                    money+=100;
+                System.out.println(money);
+            }
+        });
+    }
+}
+```
+### 异常类
+
+try catch finally
+
 ```java
 try{
     turnOvenOn();
@@ -246,7 +302,51 @@ try{
 
 ```
 
+throw抛出异常
+
+throws声明异常
+
+```java
+public class BankException extends Exception{
+    String message;
+    public BankExceltion(int m ,int n){
+        message="入账资金"+ m +"是负数或支出"+ n +"是正数，不符合系统要求";
+    }
+    public String warnMess(){
+        return message;
+    }
+}
+public class Bank{
+    //...
+    public void income(int in,int out)throws BankException{
+        if(in<=0||out>=0||int+out<=0){
+            throw new BankException(in,out);
+        }
+    }
+    //...
+}
+```
+
+
+
+### 异常分类
+
+可控异常(检测型异常)：预期可能发生的，必须 处理
+
+- I/O输入输出
+
+执行时异常：可以不处理
+
+
+### 断言
+`assert booleanExpression;`
+若表达式booleanExpression的值为true，程序继续执行，否则程序立刻结束执行。
+
+`assert booleanExpression;`
+若表达式booleanExpression的值为true，程序继续执行，否则程序立刻结束执行，并输出messageException的值。
+
 ## GUI
+
 Three ways to put things on GUI:
 1. put widgets on a frame
 2. draw 2D graphics on a widget

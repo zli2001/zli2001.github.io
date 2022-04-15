@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随想 on kliiu</title>
+    <link>http://kliiu.github.io/categories/%E9%9A%8F%E6%83%B3/</link>
+    <description>Recent content in 随想 on kliiu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 13:46:18 +0800</lastBuildDate><atom:link href="http://kliiu.github.io/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次拆电脑</title>
+      <link>http://kliiu.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8B%86%E7%94%B5%E8%84%91/</link>
+      <pubDate>Thu, 14 Apr 2022 13:46:18 +0800</pubDate>
+      
+      <guid>http://kliiu.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8B%86%E7%94%B5%E8%84%91/</guid>
+      <description>&lt;p&gt;  从前一阵开始，电脑底部右边就开始发出奇怪的异响，时而剧烈，时而又消失，在电脑被微微抬起时尤为严重。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

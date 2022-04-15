@@ -121,7 +121,7 @@ WHERE prod_desc LIKE '%toy%carrots%' ;
 ## Lesson 7 创建计算字段
 ```sql
 
---拼接 +
+--拼接 + 或 ||
 SELECT vend_name + '('+ vend_country + ')'
 FROM Vendors
 ORDER BY vend_name;
@@ -487,4 +487,58 @@ WHERE Customers.cust_id=Orders.cust_id
 Group BY Customers.cust_name
 HAVING SUM(quantity*item_price)>=1000;
 
+```
+
+## Lesson 18 视图
+```sql
+
+--使用视图
+--视图是虚拟的表，包含一个查询
+--与表一样，视图必须唯一命名（不能给视图取与别的视图或表相同的 名字）。
+--对于可以创建的视图数目没有限制。
+--创建视图，必须具有足够的访问权限。这些权限通常由数据库管理人员授予。
+--视图可以嵌套，即可以利用从其他视图中检索数据的查询来构造视图。
+--所允许的嵌套层数在不同的DBMS中有所不同（嵌套视图可能会严重降低查询的性能，因此在产品环境中使用之前，应该对其进行全面测试）。
+
+--限制和规则
+--许多DBMS禁止在视图查询中使用 ORDER BY 子句。
+
+--18.2.1使用视图简化复杂的联结
+/*
+CREATE VIEW ProductCustomers AS --创建视图
+SELECT cust_name, cust_contact, prod_id
+FROM Customers, Orders, OrderItems
+WHERE Customers.cust_id = Orders.cust_id
+AND OrderItems.order_num = Orders.order_num;
+
+
+--删除视图   DROP VIEW viewname;
+
+--检索订购了产品 RGAN01 的顾客，可如下进行：
+SELECT cust_name, cust_contact
+FROM ProductCustomers
+WHERE prod_id = 'RGAN01';
+
+CREATE VIEW VendorLocations AS
+SELECT RTRIM(vend_name) + ' (' + RTRIM(vend_country) + ')'
+AS vend_title
+FROM Vendors;
+
+
+SELECT * FROM VendorLocations;
+*/
+
+--视图提供了一种封装 SELECT 语句的层次，可用来简化数据处理，重新 格式化或保护基础数据。
+
+--18.4.1
+/*
+CREATE VIEW CustomersWithOrders AS
+SELECT Customers.cust_id,cust_name,cust_address,
+cust_city,cust_contact,cust_email,
+cust_state,cust_zip,cust_country
+FROM Customers
+INNER JOIN Orders ON Orders.cust_id=Customers.cust_id
+*/
+SELECT *
+FROM CustomersWithOrders
 ```

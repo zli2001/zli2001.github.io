@@ -43,3 +43,17 @@ SET email='..' WHERE CURRENT OF StuCur
 CLOSE cursor
 DEALLOCATE stucur
 ```
+
+## 创建表
+
+从已有的表创建表
+
+1. 只要表结构不要数据 :
+2. 既要表结构又要数据 :
+
+```sql
+--1
+select * into newtable from oldtable where 1=2
+--2
+select * into newtable from oldtable
+```
