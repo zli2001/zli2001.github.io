@@ -9,7 +9,7 @@ draft: false
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "My first blog"
-tags: [“hugo"]
+tags: [hugo]
 categories: ["Coding"]
 
 lightgallery: true
