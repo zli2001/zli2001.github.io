@@ -1,5 +1,4 @@
 ---
-weight: 1
 title: "ReadMore"
 date: 2022-03-20T16:02:47+08:00
 draft: false
@@ -10,7 +9,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "My first blog"
 tags: [hugo]
-categories: ["Coding"]
+categories: ["Coding","Blog"]
 
 lightgallery: true
 ---

@@ -1,5 +1,5 @@
 ---
-weight: 1
+
 title: "Java构造函数默认参数"
 date: 2022-03-24T17:13:25+08:00
 draft: false

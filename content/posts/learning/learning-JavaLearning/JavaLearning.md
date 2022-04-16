@@ -1,5 +1,5 @@
 ---
-weight: 1
+
 title: "Java Learning"
 date: 2022-04-15T10:09:58+08:00
 draft: false
@@ -356,6 +356,33 @@ public class Bank{
 
 `assert booleanExpression;`
 若表达式booleanExpression的值为true，程序继续执行，否则程序立刻结束执行，并输出messageException的值。
+## 常用使用类
+### 正则表达式
+e.g.
+
+```java
+''\\dcat';
+\d //元字符,表示0-9中任意数
+```
+
+```
+public boolean matches(String regex){}//regex表示正则表达式
+//调用：
+str.matches(regex);//判断字符串是否与正则表达式匹配
+```
+
+```
+replaceAll();
+public String split(String regex);//使用参数指定的正则表达式regex作为分隔标记
+```
+
+```
+StringTokenlizer对象是一个分析器
+```
+
+
+
+
 
 ## GUI
 

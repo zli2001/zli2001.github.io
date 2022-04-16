@@ -39,7 +39,7 @@ enableEmoji = true
     # language name
     languageName = "English"
     # whether to include Chinese/Japanese/Korean
-    hasCJKLanguage = false
+    hasCJKLanguage = true
     # default amount of posts in each pages
     paginate = 12
     # [UA-XXXXXXXX-X] google analytics code
@@ -187,7 +187,7 @@ enableEmoji = true
         #FreeCodeCamp = ""
         #Bitbucket = ""
         #Stackoverflow = ""
-        Weibo = "兰州手卷"
+        Weibo = "7724960004"
         #Odnoklassniki = ""
         #VK = ""
         #Flickr = ""
@@ -227,7 +227,7 @@ enableEmoji = true
         #Gitea = ""
         #XMPP = ""
         #Matrix = ""
-        Bilibili = "兰州手卷"
+        Bilibili = "14724807"
         Email = "klliiuuu@outlook.com"
         RSS = true
 

@@ -1,5 +1,4 @@
 ---
-weight: 1
 title: "SQL必知必会"
 date: 2022-04-01T19:04:06+08:00
 draft: false
@@ -66,4 +65,20 @@ DEALLOCATE stucur
 select * into newtable from oldtable where 1=2
 --2
 select * into newtable from oldtable
+```
+## 存储过程
+
+```sql
+--利用存储过程，查询所有学生信息
+USE teaching
+GO
+IF exists(
+	SELECT * FROM SYSOBJECTS
+		WHERE name='pro1' AND type='p')
+	DROP PROCEDURE pro1
+	GO
+CREATE PROCEDURE pro1
+AS SELECT * FROM student
+GO
+EXEC pro1;
 ```

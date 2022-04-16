@@ -1,5 +1,4 @@
 ---
-weight: 1
 title: "Microeconomics"
 date: 2022-03-29T13:53:19+08:00
 draft: true

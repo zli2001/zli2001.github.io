@@ -1,5 +1,4 @@
 ---
-weight: 1
 title: "Hello Hugo"
 date: 2022-03-19T15:06:09+08:00
 draft: false
