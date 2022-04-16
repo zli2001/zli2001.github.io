@@ -9,7 +9,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "Notes and answers of 《STL必知必会》"
 tags: ["code","STL"]
-categories: ["Coding"]
+categories: ["Coding","STL"]
 
 lightgallery: true
 ---
