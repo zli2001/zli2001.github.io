@@ -18,7 +18,7 @@ While I push my hugo project to github, action deploying went wrong:
    ![Solution1.png](Solution1.png)
 
 
-2. change `{{` to `{ {` (add a space between them):
+2.  (add a space between them):
 
    (https://www.ucloud.cn/yun/39853.html):
 ![Solution2.png](Solution2.png)
