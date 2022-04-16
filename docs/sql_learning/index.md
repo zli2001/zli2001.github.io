@@ -3,7 +3,7 @@
 
 <!--more-->
 
-## Lesson 5 高级数据过滤
+## Lesson 5 高级数据 过滤
 ```sql
 
 --operator AND IN OR
@@ -482,6 +482,94 @@ Group BY Customers.cust_name
 HAVING SUM(quantity*item_price)>=1000;
 
 ```
+## Lesson 15 插入数据
+### 插入一行
+```sql
+INSERT INTO  Customers(cust_id,
+					   cust_name,
+                       cust_address,
+                       cust_city,
+                       cust_state,
+                       cust_zip,
+                       cust_country,
+                       cust_contact,
+					   cust_email)
+--每一列必须提供一个值
+VALUES(1000000006,
+		'Toy Land',
+        '123 Any Street',
+        'New York',
+        'NY', 
+        '11111',
+        'USA',
+		NULL,
+		NULL);--不能写""
+```
+### 插入部分
+```sql
+INSERT INTO  Customers(cust_id,
+					   cust_name,
+                       cust_address,
+                       cust_city,
+                       cust_state,
+                       cust_zip,
+                       cust_country)
+VALUES(1000000006,
+		'Toy Land',
+        '123 Any Street',
+        'New York',
+        'NY', 
+        '11111',
+        'USA',);
+```
+如果某列定义为允许NULL，或表定义中给出了默认值则可以省略
+### 插入检索出的数据
+从一个名为CustNew的表中读出数据并插入到Customers
+```sql
+INSERT INTO Customers(cust_id, 
+					  cust_contact,
+                      cust_email,
+                      cust_name,
+                      cust_address,
+                      cust_city,
+                      cust_state,
+                      cust_zip,
+                      cust_country)
+SELECT cust_id, 
+	   cust_contact,
+	   cust_email,
+	   cust_name,
+       cust_address,
+       cust_city,
+       cust_state,
+       cust_zip,
+       cust_country
+FROM CustNew;
+```
+### 复制表
+`SELECT * INTO CustCopy FROM Customers;`
+-  任何 SELECT 选项和子句都可以使用，包括 WHERE 和 GROUP BY； 
+-  可利用联结从多个表插入数据；
+-  不管从多少个表中检索数据，数据都只能插入到一个表中。
+
+### 15.4
+```sql
+--1.
+INSERT INTO Customers(cust_id,
+					  cust_name,
+					  cust_address,
+					  cust_city,
+					  cust_state,
+					  cust_country)
+VALUES(1000000007,'ME','Sichuan','Chengdu',
+				'CN','CN')
+--2.
+SELECT * INTO Orders_backup FROM Orders;
+SELECT * INTO OrdersItems_backup FROM OrderItems;
+
+```
+
+
 
 ## Lesson 18 视图
 ```sql
@@ -535,5 +623,43 @@ INNER JOIN Orders ON Orders.cust_id=Customers.cust_id
 */
 SELECT *
 FROM CustomersWithOrders
+```
+
+## Lesson 19 存储过程
+
+为以后使用而保存的一条或多条SQL语句，可将其视为批文件。
+
+### 19.3执行存储过程
+
+EXECUTE:
+
+可能有以下执行选择：
+
+- 参数可选
+
+- 不按次序给出参数
+
+- 输出参数
+
+- 用SELECT语句检索数据
+
+- 返回代码，允许存储过程返回一个值到正在执行的应用程序
+
+  
+
+###19.4 创建存储过程
+```sql
+CREATE PROCEDURE MailingListCount 
+AS 
+DECLARE @cnt INTEGER 
+SELECT @cnt = COUNT(*) 
+FROM Customers WHERE NOT cust_email IS NULL;
+RETURN @cnt;
+```
+调用:
+```SQL
+DECLARE @ReturnValue INT 
+EXECUTE @ReturnValue=MailingListCount;
+SELECT @ReturnValue;
 ```
 

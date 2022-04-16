@@ -12,12 +12,12 @@
     <guid>https://kliiu.github.io/javalearning/</guid>
     <description><![CDATA[Java learning notes.]]></description>
 </item><item>
-    <title>SQL必知必会</title>
+    <title>SQL上课</title>
     <link>https://kliiu.github.io/sql%E4%B8%8A%E8%AF%BE/</link>
     <pubDate>Fri, 01 Apr 2022 19:04:06 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://kliiu.github.io/sql%E4%B8%8A%E8%AF%BE/</guid>
-    <description><![CDATA[上课 游标  声明  1 2 3 4 5 6 7 8  DECLAREStuCurSCROLLCURSOR--创建一个游标 -- SCROLL 动态游标，可前进可后退 -- 不写SCROLL 静态游标，只能一步一步前进，不能后退 FORSELECT*FROMstudentFORUPDATEOFemail--锁字段 也就是从你select语句执行后 表的email 字段被锁定 别人将不能进行修改操作 直到你进行update commit后才能修改 DECLARE@学号char(10)@姓名char(10)@...--定义一些变量，用来导出游标所指数据 --@xx 变量 @@xx 系统变量   打开游标  1 2 3 4 5 6 7 8 9  OPENstucurIF@@ERROR=0--若成功打开一个游标 PRINT&#39;共有&#39;+CONVERT(VARCHAR(3),@@cursor_rows)+&#39;个学生&#39;-- @@cursor_rows 游标所指表的总行数 -- 初始游标指向表的顶端，需要下移一行才有数据 FETCHNEXTFROMstucurINTO@学号,@姓名,@...--导出游标的数据 --有多少属性就导出多少 PRINT@...  修改  1 2 3 4  FETCHNEXTFROMstucur--静态只能用next --动态可以用PRIOR ,NEXT ,FIRST ,LAST ,ABSOLUTE ,RELATIVELY UPDATEstudentSETemail=&#39;.]]></description>
+    <description><![CDATA[上课 游标 声明 1 2 3 4 5 6 7 8 DECLAREStuCurSCROLLCURSOR--创建一个游标 -- SCROLL 动态游标，可前进可后退 -- 不写SCROLL 静]]></description>
 </item><item>
     <title>SQL必知必会</title>
     <link>https://kliiu.github.io/sql_learning/</link>
