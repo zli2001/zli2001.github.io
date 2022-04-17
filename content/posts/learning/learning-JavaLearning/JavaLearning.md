@@ -3,15 +3,15 @@
 title: "Java Learning"
 date: 2022-04-15T10:09:58+08:00
 draft: false
-
 lastmod: 2022-04-15T10:09:58+08:00
-draft: false
+
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "Java learning notes."
-
+hiddenFromSearch: false
 tags: ["java","code"]
 categories: ["Coding"]
+
 
 lightgallery: true
 ---
