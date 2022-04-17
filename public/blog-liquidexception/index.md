@@ -1,27 +1,12 @@
----
-title: "Blog LiquidException"
-date: 2022-04-16T16:59:59+08:00
-lastmod: 2022-04-16T16:59:59+08:00
+# Blog LiquidException
 
-draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
-description: "Trouble shooting of deploying github pages"
-
-tags: ["troubleshooting"]
-categories: ["Blog"]
-
-
-lightgallery: true
-
----
 Solving the deploying problem.
 <!--more-->
 ## Error
 While I push my hugo project to github, action deploying went wrong: 
 
-![Liquid](Liquid.png)
 
+<img src="Liquid.png" alt="Liquid" referrerpolicy="no-referrer">
 
 ## Code
 

@@ -5,8 +5,7 @@ Solving the deploying problem.
 ## Error
 While I push my hugo project to github, action deploying went wrong: 
 
-![Liquid](Liquid.png)
-
+![Liquid](Liquid.png "Liquid Exception")
 
 ## Code
 
@@ -19,9 +18,8 @@ While I push my hugo project to github, action deploying went wrong:
 
 
 2.  (add a space between them):
-
    (https://www.ucloud.cn/yun/39853.html):
-![Solution2.png](Solution2.png)
+   ![Solution2.png](Solution2.png)
 ## Trouble Shooting
 There is problem description on the [jekyll](https://jekyllrb.com/docs/troubleshooting/#configuration-problems) pages but not solution.
 

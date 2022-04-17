@@ -4,7 +4,14 @@
         <link>https://kliiu.github.io/tags/troubleshooting/</link>
         <description>troubleshooting - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (kliiu)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 Apr 2022 16:59:59 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/troubleshooting/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>klliiuuu@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 17 Apr 2022 11:21:46 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/troubleshooting/" rel="self" type="application/rss+xml" /><item>
+    <title>How to show pictures in hugo blog</title>
+    <link>https://kliiu.github.io/blog-showpicture/</link>
+    <pubDate>Sun, 17 Apr 2022 11:21:46 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/blog-showpicture/</guid>
+    <description><![CDATA[<p>If you can see your pictures in md file but not on hugo site, this is what you should do.</p>]]></description>
+</item><item>
     <title>Blog LiquidException</title>
     <link>https://kliiu.github.io/blog-liquidexception/</link>
     <pubDate>Sat, 16 Apr 2022 16:59:59 &#43;0800</pubDate>
