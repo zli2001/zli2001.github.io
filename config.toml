@@ -31,6 +31,11 @@ enableGitInfo = true
 # 是否使用 emoji 代码
 enableEmoji = true
 
+#search
+
+
+
+
 [languages]
   [languages.en]
     weight = 1
@@ -118,11 +123,12 @@ enableEmoji = true
         iconColor = "#5bbad5"
         # Windows v8-10 tile color
         tileColor = "#da532c"
+
       # Search config
       [languages.en.params.search]
         enable = true
         # type of search engine ("lunr", "algolia")
-        type = "algolia"
+        type = "lunr"
         # max index length of the chunked content
         contentLength = 4000
         # placeholder of the search bar
@@ -230,6 +236,7 @@ enableEmoji = true
         Bilibili = "14724807"
         Email = "klliiuuu@outlook.com"
         RSS = true
+
 
 
  

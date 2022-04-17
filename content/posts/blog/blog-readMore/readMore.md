@@ -8,8 +8,8 @@ draft: false
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "My first blog"
-tags: [hugo]
-categories: ["Coding","Blog"]
+tags: ["hugo"]
+categories: ["Blog"]
 
 lightgallery: true
 ---
