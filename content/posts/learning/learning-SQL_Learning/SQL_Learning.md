@@ -16,7 +16,112 @@ lightgallery: true
 
 <!--more-->
 
+## TODO
+
+- [ ] Lesson 13 创建高级联结
+- [ ] Lesson 14 组合查询
+- [ ] Lesson 16 更新和删除数据
+- [ ] Lesson 17 创建和操纵表
+
+## Lesson 2 检索数据
+
+```sql
+-- SELECT TOP 2 prod_name 
+-- FROM Products
+-- 注释
+/*多
+  行
+  注
+  释
+*/
+--2.9.1
+--SELECT cust_id
+--FROM Customers;
+
+--2.9.2
+--SELECT DISTINCT prod_id
+--FROM OrderItems;
+
+--2.9.3
+SELECT cust_id
+FROM Customers;
+```
+
+## Lesson 3 排序检索数据
+
+```sql
+SELECT prod_name
+FROM Products
+ORDER BY prod_name DESC;--descending
+
+--3.6.1
+SELECT cust_name
+FROM Customers 
+ORDER BY cust_name DESC;
+
+--3.6.2
+SELECT cust_id, order_num
+FROM Orders
+ORDER BY cust_id,order_date DESC;
+
+--3.6.3
+SELECT item_price,order_num
+FROM OrderItems
+ORDER BY order_num,item_price;
+
+
+```
+
+## Lesson 4 过滤数据
+
+```sql
+SELECT prod_id, prod_name, prod_price
+FROM Products
+WHERE prod_price = 3.49
+ORDER BY prod_name; --ORDER BY 放在 WHERE之后
+
+SELECT prod_name,prod_price
+FROM Products
+WHERE prod_price < 10;
+
+SELECT vend_id,prod_name
+FROM Products
+WHERE vend_id != 'DLL01';-- <>可以和!=互换
+
+SELECT prod_name,prod_price
+FROM Products
+WHERE prod_price BETWEEN 5 AND 10;
+
+SELECT cust_name
+FROM Customers
+WHERE cust_email IS NULL;
+
+
+--4.4.1
+SELECT prod_id,prod_name
+FROM Products
+WHERE prod_price=9.49;
+--4.4.2
+SELECT prod_id,prod_name
+FROM Products
+WHERE prod_price>=9;
+
+--4.4.3
+SELECT DISTINCT order_num
+FROM OrderItems
+WHERE order_num>=100;
+
+--4.4.4
+SELECT prod_name,prod_price
+FROM Products
+WHERE prod_price BETWEEN 3 AND 6
+ORDER BY prod_price;
+```
+
+
+
 ## Lesson 5 高级数据 过滤
+
 ```sql
 
 --operator AND IN OR
@@ -163,6 +268,8 @@ SELECT prod_id,prod_price,
 prod_price*0.9 AS sale_price--计算字段
 FROM Products;
 ```
+##  Lesson 8 使用函数处理数据
+
 ```sql
 --8 使用函数处理数据
 
@@ -216,7 +323,7 @@ FROM Orders
 WHERE DATEPART( YY,order_date)=2020 AND DATEPART(MM,order_date)=1;
 ```
 
-## Lesson9  汇总数据
+## Lesson 9  汇总数据
 ```sql
 --Lesson 9
 --汇总数据
@@ -256,7 +363,7 @@ FROM Products
 WHERE prod_price<10;
 
 ```
-## Lesson10 分组数据
+## Lesson 10 分组数据
 ```sql
 --Lesson10 分组数据
 --过滤分组HAVING
@@ -565,7 +672,7 @@ FROM CustNew;
 -  可利用联结从多个表插入数据；
 -  不管从多少个表中检索数据，数据都只能插入到一个表中。
 
-### 15.4
+### 15.4 习题答案
 ```sql
 --1.
 INSERT INTO Customers(cust_id,

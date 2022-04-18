@@ -15,7 +15,7 @@ categories: ["Coding"]
 
 lightgallery: true
 ---
-
+Java learning notes.
 <!--more-->
 
 ## 类与对象
@@ -390,3 +390,82 @@ Three ways to put things on GUI:
 1. put widgets on a frame
 2. draw 2D graphics on a widget
 3. put a JPEG on a widget
+
+- Swing包
+- AWT包
+
+
+## Saving objects 
+### *Serializable* 可串行化的
+Use an ObjectOutputStream(from the java.io package) to serialize an object.
+{{< admonition note "Note" >}}
+
+a interface known as a marker or tag interface:
+doesn't have methods to implement
+
+*Most classes will and should, implements Serializable*
+
+{{< /admonition >}}
+
+announce an class is *serinalizable* -> objects of the type *saveable*
+
+superclass *serializable* -> subclasses *serializable* automatically 
+
+#### transient 
+an instance variable as transient if it **can’t (or shouldn’t) be saved**.
+
+
+
+{{< admonition warning "Exception" >}}
+
+否则，在一个*Srializable* 的类中有非*Srializable* 的 instance variable会引起错误。
+
+```java
+import java.net.*; 
+class Chat implements Serializable { 
+    transient String currentID;
+	String userName;
+	// more code
+}
+```
+
+{{< /admonition >}}
+### Questions
+{{< admonition question "Question"  true >}}
+
+How is a non-serializable instance saved?
+
+> - If you serialize an object, a transient reference instance variable will be brought back as null, regardless of the value it had at the time it was saved. 
+>
+> - To solve this:
+>
+> 1. Reinitialize the null null instance variable back to some default state.
+> 2.  Save the key values and use them to essentially re-create a brand new variable that’s identical to the original.
+
+What happens if two objects in the object graph are the same object?
+
+> Serialization knows when two objects in the graph are the same.
+>
+>  In that case, only one of the objects is saved, and during deserialization, any references to that single object are
+> restored.
+
+{{< /admonition >}}
+
+### Writing a String to a Text file
+```java
+import java.io.*;
+
+class WriteAFile {
+  public static void main(String[] args) {
+    try{
+     FileWriter writer = new FileWriter("Foo.txt");//若文件不存在，会自动创建
+     writer.write("hello foo!");//必须是str
+     writer.close();
+    }catch (IOException ex){
+      ex.printStackTrace();
+    }
+  }
+}
+
+
+```

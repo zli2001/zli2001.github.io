@@ -4,13 +4,20 @@
         <link>https://kliiu.github.io/categories/coding/</link>
         <description>Coding - Category - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (kliiu)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/coding/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>klliiuuu@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/coding/" rel="self" type="application/rss+xml" /><item>
+    <title>Error and Exception</title>
+    <link>https://kliiu.github.io/learning-error_exception/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-error_exception/</guid>
+    <description><![CDATA[Compare error and exception.]]></description>
+</item><item>
     <title>Java Learning</title>
     <link>https://kliiu.github.io/javalearning/</link>
     <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://kliiu.github.io/javalearning/</guid>
-    <description><![CDATA[Java learning notes.]]></description>
+    <description><![CDATA[<p>Java learning notes.</p>]]></description>
 </item><item>
     <title>SQL上课</title>
     <link>https://kliiu.github.io/sql%E4%B8%8A%E8%AF%BE/</link>
