@@ -7,7 +7,7 @@ lastmod: 2022-04-18T10:09:58+08:00
 
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
-description: "Compare error and exception."
+description: "Comparing error and exception."
 hiddenFromSearch: false
 tags: ["java","code"]
 categories: ["Coding"]
