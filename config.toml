@@ -14,7 +14,7 @@ enableGitInfo = true
 [frontmatter]
   date = ['date', 'publishDate', 'lastmod']
   expiryDate = ['expiryDate']
-  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  lastmod = [":fileModTime", "lastmod"]
   publishDate = ['publishDate', 'date']
 
 # website title
@@ -608,7 +608,7 @@ enableEmoji = true
   # Analytics config
   # 网站分析配置
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
       id = ""
