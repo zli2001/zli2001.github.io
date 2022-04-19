@@ -447,7 +447,7 @@ class WriteAFile {
      writer.write("hello foo!");//必须是str
      writer.close();
     }catch (IOException ex){
-      ex.printStackTrace();
+       ex.printStackTrace();
     }
   }
 }

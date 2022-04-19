@@ -235,7 +235,7 @@ enableEmoji = true
         #Matrix = ""
         Bilibili = "14724807"
         Email = "klliiuuu@outlook.com"
-        RSS = true
+        RSS = false
 
 
 
