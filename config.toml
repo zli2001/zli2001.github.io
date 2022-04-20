@@ -112,7 +112,7 @@ enableEmoji = true
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
-        title = "LoveIt"
+        title = "kliiu"
         # whether to omit favicon resource links
         noFavicon = false
         # modern SVG favicon to use in place of older style .png and .ico files
@@ -159,7 +159,7 @@ enableEmoji = true
           # title shown in home page (HTML format is supported)
           title = ""
           # subtitle shown in home page
-          subtitle = "今日事，今日毕。"
+          subtitle = "我牵着你的手经过，种满鸭蛋的山坡"
           # whether to use typeit animation for subtitle
           typeit = true
           # whether to show social links
@@ -282,7 +282,9 @@ enableEmoji = true
       name = "兰州手卷"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
+      #pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
+      #pre = "<i class="far fa-utensils"></i>"
+
       # you can add extra information after the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
@@ -299,7 +301,7 @@ enableEmoji = true
     custom = ''
     # whether to show Hugo and theme info
     # 是否显示 Hugo 和主题信息
-    hugo = true
+    hugo = false
     # whether to show copyright info
     # 是否显示版权信息
     copyright = true
@@ -308,7 +310,7 @@ enableEmoji = true
     author = true
     # site creation time
     # 网站创立年份
-    since = 2019
+    since = 2022
     # ICP info only in China (HTML format is supported)
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
@@ -695,7 +697,7 @@ enableEmoji = true
 # Author config
 # 作者配置
 [author]
-  name = "kliiu"
+  name = "兰州手卷"
   email = "klliiuuu@outlook.com"
   link = "https://kliiu.github.io/about"
 
