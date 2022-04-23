@@ -1,6 +1,6 @@
 ---
 
-title: "Ubuntu 误删 /usr/bin/python3"
+title: "Ubuntu20.04 误删 /usr/bin/python3"
 date: 2022-04-23T10:09:58+08:00
 draft: false
 lastmod: 2022-04-23T10:09:58+08:00
