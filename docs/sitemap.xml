@@ -2,11 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://kliiu.github.io/</loc><lastmod>2022-04-23T10:58:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/categories/</loc><lastmod>2022-04-23T10:58:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/posts/</loc><lastmod>2022-04-23T10:58:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/tags/</loc><lastmod>2022-04-23T10:58:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/categories/troubleshooting/</loc><lastmod>2022-04-23T10:46:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/categories/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/posts/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/tags/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/categories/troubleshooting/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/tags/ubuntu/</loc><lastmod>2022-04-23T10:46:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/trouble-%E8%AF%AF%E5%88%A0ubuntu%E7%9A%84python3/</loc><lastmod>2022-04-23T10:46:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/tags/code/</loc><lastmod>2022-04-23T10:58:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -21,9 +21,8 @@
             <loc>https://kliiu.github.io/tags/troubleshooting/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/blog-liquidexception/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/learning-javalearning/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/tags/hardware/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/tags/thoughts/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://kliiu.github.io/thoughts-%E9%A3%8E%E6%89%87%E5%BC%82%E5%93%8D/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/tags/hardware/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/trouble-%E9%A3%8E%E6%89%87%E5%BC%82%E5%93%8D/</loc><lastmod>2022-04-23T11:00:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/tags/stl/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/categories/stl/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -35,6 +34,7 @@
             <loc>https://kliiu.github.io/learning-java%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/reading-%E9%9C%8D%E4%B9%B1%E6%97%B6%E6%9C%9F%E7%9A%84%E7%88%B1%E6%83%85/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/tags/book/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://kliiu.github.io/tags/thoughts/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/tags/hugo/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/blog-readmore/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://kliiu.github.io/blog-my-first-post/</loc><lastmod>2022-04-23T10:27:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
