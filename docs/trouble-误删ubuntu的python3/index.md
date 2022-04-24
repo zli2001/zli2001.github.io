@@ -1,4 +1,4 @@
-# Ubuntu 误删 /usr/bin/python3
+# Ubuntu20.04 误删 /usr/bin/python3
 
 
 一次失败的尝试与宝贵的教训。
