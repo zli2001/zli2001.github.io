@@ -35,7 +35,7 @@ sudo xz -d Python-3.8.3.tar.xz
 sudo tar -xvf Python-3.8.3.tar #解压
 ```
 
---prefix=后面的不能有空格，否则会找不到文件。
+--prefix=后面的[不能有空格](https://blog.csdn.net/u013249853/article/details/79827489)，否则会找不到文件。
 ```bash
 cd Python-3.8.3
 ./configure --prefix=/usr/local/python-3.8.3

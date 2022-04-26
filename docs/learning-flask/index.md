@@ -72,7 +72,7 @@ app.config用于存储框架
 ```python
 @app.route('/', methods=['GET', 'POST']) 
 def index():
-	...//methods参数告诉Flask在URL映射中把这个视图函数注册为GET和POST 请求的处理程序。如果没指定 methods 参数，就只把视图函数注册为GET请求的处理程序。
+	...#methods参数告诉Flask在URL映射中把这个视图函数注册为GET和POST 请求的处理程序。如果没指定 methods 参数，就只把视图函数注册为GET请求的处理程序。
 ```
 -  GET请求没有主体，提交的数据以查询字符串的形式附加的URL中，可在浏览器的地址中看到
 -  将提交表单作为POST请求更为便利
