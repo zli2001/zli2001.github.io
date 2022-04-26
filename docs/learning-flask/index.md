@@ -60,7 +60,7 @@ class NameForm(Form):
 app.config用于存储框架
 ### 4.3把表单渲染成HTML
 视图函数把一个NameForm实例通过参数form传入模板，在模板中可以生成一个简单的表单。但是用BootStrao渲染表单对象更为便捷。
-```html
+```markdown
 {% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Flasky{% endblock %}
 {% block page_content %} <div class="page-header"> <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>#条件控制渲染什么指令
