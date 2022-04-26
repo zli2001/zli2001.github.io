@@ -4,7 +4,14 @@
         <link>https://kliiu.github.io/tags/flask/</link>
         <description>flask - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/flask/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 24 Apr 2022 13:46:18 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/flask/" rel="self" type="application/rss+xml" /><item>
+    <title>from .csrf import CSRFProtect, CsrfProtect SyntaxError</title>
+    <link>https://kliiu.github.io/trouble-flask_wtf/</link>
+    <pubDate>Sun, 24 Apr 2022 13:46:18 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/trouble-flask_wtf/</guid>
+    <description><![CDATA[<p>《Flask+Web开发》这本书的4.4在视图函数中处理表单程序引入flask_wtf报错</p>]]></description>
+</item><item>
     <title>Flask Learning</title>
     <link>https://kliiu.github.io/learning-flask/</link>
     <pubDate>Thu, 21 Apr 2022 10:09:58 &#43;0800</pubDate>

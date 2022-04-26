@@ -8,7 +8,7 @@ draft: false
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
 
-tags: [hardware"]
+tags: ["hardware"]
 categories: ["Troubleshooting"]
 
 lightgallery: true

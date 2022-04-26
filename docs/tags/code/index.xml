@@ -4,7 +4,14 @@
         <link>https://kliiu.github.io/tags/code/</link>
         <description>code - Tag - </description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/code/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/code/" rel="self" type="application/rss+xml" /><item>
+    <title>SQL and Pandas</title>
+    <link>https://kliiu.github.io/learning-sql_pandas/</link>
+    <pubDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-sql_pandas/</guid>
+    <description><![CDATA[<p>写pandas时的一点感悟。</p>]]></description>
+</item><item>
     <title>Flask Learning</title>
     <link>https://kliiu.github.io/learning-flask/</link>
     <pubDate>Thu, 21 Apr 2022 10:09:58 &#43;0800</pubDate>
@@ -66,13 +73,6 @@
     <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>2019蓝桥杯C&#43;&#43;B 二叉树的权值</title>
-    <link>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</link>
-    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

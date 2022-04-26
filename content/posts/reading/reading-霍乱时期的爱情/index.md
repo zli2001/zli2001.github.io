@@ -1,6 +1,6 @@
 ---
 
-title: "《霍乱时期的爱情》随想"
+title: "《霍乱时期的爱情》书摘"
 date: 2022-03-23T15:08:36+08:00
 draft: true
 
@@ -9,15 +9,17 @@ draft: false
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
 
+
 tags: ["book","thoughts"]
 categories: ["Reading"]
 
 lightgallery: true
 ---
-
+Toda La Vida（一生一世）
+***
+<!--more--> 
 他还太年轻，尚不知道回忆总是会抹去坏的，夸大好的，而也正是由于这种玄妙，我们才得以承担过去的重负。
 
-<!--more--> 
 ***
 
 她们的爱情迟缓而艰难，常常被不详的预兆干扰，生命对她们来说简直没完没了。
