@@ -3,7 +3,7 @@ title: "SQL上课"
 date: 2022-04-01T19:04:06+08:00
 draft: false
 
-lastmod: 2022-04-01T19:04:06+08:00
+lastmod: 2022-04-27T19:04:06+08:00
 draft: false
 author: "kliiu"
 authorLink: "https://kliiu.github.io"
@@ -221,58 +221,131 @@ select * into newtable from oldtable
        	PRINT '删除成功'
        ```
 
-## 事务
 
 ## 函数
 
 1. 标量函数
 
 ```sql
---函数前不能用use
+-- 函数
+--1
+
 IF EXISTS(SELECT * 
-          FROM SYSOBJECTS
-          WHERE NAME='func1' AND
-          TYPE='FN')
-   DROP FUNCTION fun1
---写函数统计某性别人数
-CREATE FUNCTION dbo.fun1(@StuSex nchar(1))--区别1参数要（）
-RETURNS int --区别2函数可以返回自己返回值
-AS 	
-	BEGIN 
-		DECLARE @num int
-        SET @num=0--初始化
-        SELECT @num=COUNT(*)
-        FROM Student 
-        WHERE sex=@StuSex
-        RETURN @num --区别3：return在begin end里
-    END
+		  FROM SYSOBJECTS
+		  WHERE NAME='fun1' AND TYPE='FN'
+		  )
+	DROP FUNCTION func1
+GO
+CREATE FUNCTION dbo.func1(@stuSex nchar(1)) --函数的参数有括号
+RETURNS int
+AS 
+BEGIN
+	DECLARE @num int
+	SET @num=0
+	SELECT @num=COUNT(*) FROM student
+	WHERE sex=@stuSex
+	RETURN @num --区别3：return在begin end里
+END
+GO
+--调用
+DECLARE @num int
+SET @num=dbo.func1('男') -- 函数直接赋值调用，无需exec
+PRINT('男生人数为：'+cast(@num AS char(2)))
+GO
 ```
 
 2. 内嵌表值函数
 
-3. 多语句表值函数
-
-   ```sql
-   --函数前不能用use
+   ```SQL
+   --2.
+   -- 输出某同学的学号、姓名、成绩
    IF EXISTS(SELECT * 
-             FROM SYSOBJECTS
-             WHERE NAME='func3' AND
-             TYPE='FN')
-      DROP FUNCTION fun3
-   --写函数统计某性别人数
-   CREATE FUNCTION fun1(@StuName nchar())--区别1参数要（）
-   RETURNS @StuTable(学号 char()
-   				  课程号 char()
-                     成绩  int)
-   AS 	
-   	BEGIN 
-   		DECLARE @num int
-           SET @num=0--初始化
-           SELECT @num=COUNT(*)
-           FROM Student 
-           WHERE sex=@StuSex
-           RETURN 
-       END
+   		  FROM SYSOBJECTS
+   		  WHERE NAME='func2' AND TYPE='IF'
+   		  )
+   	DROP FUNCTION func2
+   GO
+   
+   CREATE FUNCTION dbo.func2(@stuName AS nchar(8)) --函数的参数有括号
+   RETURNS TABLE
+   AS 
+   RETURN (
+   	SELECT student.studentno,sname,courseno,final
+   	FROM student,score
+   	WHERE student.studentno=score.studentno
+   		AND student.sname LIKE @stuName 
+   )
+   GO
+   
+   --调用
+   SELECT * 
+   FROM dbo.func2('韩吟秋')
+   GO
+   
    ```
 
    
+
+3. 多语句表值函数
+
+   ```sql
+   
+   --3.
+   --函数前不能用use
+   IF EXISTS 
+   	(SELECT * 
+   	FROM SYSOBJECTS
+   	WHERE NAME='func3' AND TYPE='TF'
+   	)
+   	DROP FUNCTION func3
+   GO
+   
+   --写函数统计某性别人数
+   CREATE FUNCTION dbo.func3(@stuNAME AS nchar(8)) 
+   RETURNS @stuTable table (学号 nchar(10),
+   						 课程号 nchar(10),
+   						 成绩 numeric(6,2))
+   AS 
+   BEGIN
+   	INSERT @stuTable --将select结果放入新表
+   	SELECT studentno,courseno,final
+   	FROM score
+   	WHERE studentno IN (SELECT studentno
+   						FROM student
+   						WHERE sname LIKE @stuName)
+   RETURN 
+   END
+   GO
+   
+   --调用
+   SELECT * 
+   FROM dbo.func3('韩吟秋')
+   GO
+   ```
+
+## 事务
+```sql
+BEGIN TRANSACTION tran_scode
+UPDATE SC SET S#=‘201404001’ WHERE S#=‘201403001’ 
+    IF @ERROR<>0
+```
+## 数据库安全控制
+* 授权用户
+* 非授权用户
+
+### 授权管理*
+GRANT SELECT,INSERT,UPDATE 
+ON S
+TO xia —-授权给用户xia
+## 授权回收*
+REVOKE INSERT, UPDATE
+ON S
+FROM Zia
+
+### 域完整性约束
+GRADE CHECK
+
+### 实体完整性
+主键（自动）
+
+### 参照完整性

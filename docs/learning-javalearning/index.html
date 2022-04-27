@@ -10,7 +10,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kliiu.github.io/learning-javalearning/" /><meta property="og:image" content="https://kliiu.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-15T10:09:58+08:00" />
-<meta property="article:modified_time" content="2022-04-23T10:27:29+08:00" />
+<meta property="article:modified_time" content="2022-04-27T11:34:06+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kliiu.github.io/logo.png"/>
@@ -34,8 +34,8 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "java, code","wordcount":  3349 ,
-        "url": "https:\/\/kliiu.github.io\/learning-javalearning\/","datePublished": "2022-04-15T10:09:58+08:00","dateModified": "2022-04-23T10:27:29+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "java, code","wordcount":  3991 ,
+        "url": "https:\/\/kliiu.github.io\/learning-javalearning\/","datePublished": "2022-04-15T10:09:58+08:00","dateModified": "2022-04-27T11:34:06+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Java Learning</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3349 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;<span id="/learning-javalearning/" class="leancloud_visitors" data-flag-title="Java Learning">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3991 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;<span id="/learning-javalearning/" class="leancloud_visitors" data-flag-title="Java Learning">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -200,7 +200,10 @@
     <li><a href="#常用实用类">常用实用类</a>
       <ul>
         <li><a href="#string">String</a></li>
-        <li><a href="#heading"></a></li>
+        <li><a href="#正则表达式-1">正则表达式</a></li>
+        <li><a href="#字符序列的替换">字符序列的替换</a></li>
+        <li><a href="#字符序列的分解">字符序列的分解</a></li>
+        <li><a href="#stringtokenlizer类">StringTokenlizer类</a></li>
       </ul>
     </li>
   </ul>
@@ -938,33 +941,97 @@ restored.</p>
 </div></li>
 <li>
 <p>常用方法</p>
+<ul>
+<li>
+<p><code>public int length()</code></p>
+</li>
+<li>
+<p><code>public boolean equals(String s)</code></p>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">length</span><span class="o">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">startsWith</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">endWith</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">tom</span><span class="o">=</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&#34;天道酬勤&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">jerry</span><span class="o">=</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&#34;天道酬勤&#34;</span><span class="o">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><pre><code>  tom.equals(jerry)的值是true
+  tom==jerry的值是false:因为String对象tom、jerry中存放的是引用
+</code></pre>
+<ul>
+<li><code>public boolean startsWith(String s)</code></li>
+<li><code>public boolean endWith(String s)</code></li>
+<li><code>public String sunstring(int startpoint)</code>
+<code>String tom = &quot;我喜欢篮球&quot;; </code>String str = tom.substring(1,3);</li>
+<li><code>public String trim()</code>：去掉前后空格</li>
+<li>文件目录符：\</li>
 </ul>
-<h3 id="heading"></h3></div><div class="post-footer" id="post-footer">
+</li>
+</ul>
+<h3 id="正则表达式-1">正则表达式</h3>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li>
+<p>[a-d[m-p]]:a~d或m-p <strong>并</strong></p>
+</li>
+<li>
+<p>[a-z&amp;&amp;[def]]:def中任意一个 <strong>交</strong></p>
+</li>
+<li>
+<p>[a-f&amp;&amp;[^bc]]:adef <strong>差</strong></p>
+</li>
+<li>
+<p>限定修饰符：
+`String regex = &ldquo;hello[2468]?&rdquo;;</p>
+<ol>
+<li>
+<p>X?表示X出现1次或0次</p>
+</li>
+<li>
+<p>X*表示X出现0词或多次</p>
+</li>
+<li>
+<p>X+表示X出现1次或多次</p>
+</li>
+</ol>
+</li>
+<li>
+<p>匹配整数的正则表达式
+<code>String regex = &quot;-?[1-9]\\d*&quot;;</code></p>
+<p><code>\\d</code>表示0-9中任意一个数</p>
+</li>
+<li>
+<p>匹配浮点数
+<code>String regex = &quot;-?[0-9][0-9]*[.][0-9]+&quot;;</code>
+[.]或\.表示&rsquo;.&rsquo;，.表示任意字符。</p>
+</li>
+<li>
+<p>匹配email</p>
+<p><code>String regex = &quot;\\w+@\\w+\\.[a-z]+(\\.[a-z]+)?&quot;;</code></p>
+</li>
+</ul>
+<h3 id="字符序列的替换">字符序列的替换</h3>
+<p><code>String str = &quot;12hello567bird&quot;.replaceAll(&quot;[a-zA-Z]+&quot;,&quot;你好&quot;;</code>
+将 &ldquo;12hello567bird&quot;中的所有英文字符替换为&quot;你好&rdquo;</p>
+<h3 id="字符序列的分解">字符序列的分解</h3>
+<p><code>split(String regex)</code>用正则表达式作为分割标记</p>
+<h3 id="stringtokenlizer类">StringTokenlizer类</h3>
+<ul>
+<li>无需正则表达式作标记</li>
+<li>使用默认的分隔标记：空格，换行，回车，制表，进纸符。
+指定分割标记：<code>StringTokenlizer fenxi = new StringTokenlizer(s,&quot;(),&quot;);//(),的任意排列都是一个分隔符</code></li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-04-23&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/d4e8747bd4688d48aeef3857310d687d0ad5c513" target="_blank" title="commit by ‘kliiu’(klliiuuu@outlook.com) d4e8747bd4688d48aeef3857310d687d0ad5c513: docs">
+                <span>Updated on 2022-04-27&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/d4e8747bd4688d48aeef3857310d687d0ad5c513" target="_blank" title="commit by ‘kliiu’(klliiuuu@outlook.com) d4e8747bd4688d48aeef3857310d687d0ad5c513: docs">
                                     <i class="fas fa-hashtag fa-fw"></i>d4e8747</a></span>
             </div>
             <div class="post-info-license"></div>

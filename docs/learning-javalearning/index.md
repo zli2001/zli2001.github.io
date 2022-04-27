@@ -477,16 +477,70 @@ class WriteAFile {
 
 - 常用方法
 
+  - `public int length()`
+  
+  - `public boolean equals(String s)`
+  
   ```java
-  public int length()
-    
-  public boolean equals(String s)
-  
-  public boolean startsWith(String s)
-      
-  public boolean endWith(String s)
+  String tom=new String("天道酬勤")
+  String jerry=new String("天道酬勤")
   ```
+        tom.equals(jerry)的值是true
+        tom==jerry的值是false:因为String对象tom、jerry中存放的是引用
 
+  - `public boolean startsWith(String s)`
+  - `public boolean endWith(String s)`
+  - `public String sunstring(int startpoint)`
+	`String tom = "我喜欢篮球";
+	`String str = tom.substring(1,3);
+  - `public String trim()`：去掉前后空格
+  - 文件目录符：\\
   
+### 正则表达式
+- [abc]:abc中任意一个
 
-###
+- [^abc]:除abc外任意一个
+
+- [a-zA-Z]:英文字母中的任意一个
+
+- [a-d]:a~d任意一个
+
+- [a-d[m-p]]:a~d或m-p **并**
+
+- [a-z&&[def]]:def中任意一个 **交**
+
+- [a-f&&[^bc]]:adef **差**
+
+- 限定修饰符：
+  `String regex = "hello[2468]?";
+  
+  1. X?表示X出现1次或0次
+  
+  2. X*表示X出现0词或多次
+  
+  3. X+表示X出现1次或多次
+  
+- 匹配整数的正则表达式
+  `String regex = "-?[1-9]\\d*";`
+  
+  `\\d`表示0-9中任意一个数
+  
+- 匹配浮点数
+  `String regex = "-?[0-9][0-9]*[.][0-9]+";`
+  [.]或\\.表示'.'，.表示任意字符。
+
+- 匹配email
+  
+  `String regex = "\\w+@\\w+\\.[a-z]+(\\.[a-z]+)?";`
+
+### 字符序列的替换
+`String str = "12hello567bird".replaceAll("[a-zA-Z]+","你好";`
+将 "12hello567bird"中的所有英文字符替换为"你好"
+### 字符序列的分解
+`split(String regex)`用正则表达式作为分割标记
+### StringTokenlizer类
+- 无需正则表达式作标记
+- 使用默认的分隔标记：空格，换行，回车，制表，进纸符。
+指定分割标记：`StringTokenlizer fenxi = new StringTokenlizer(s,"(),");//(),的任意排列都是一个分隔符`
+  
+  

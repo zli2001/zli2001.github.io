@@ -8,7 +8,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: ""
 
-tags: ["troubleshooting"]
+tags: ["hugo"]
 categories: ["Blog"]
 
 hiddenFromHomePage: false

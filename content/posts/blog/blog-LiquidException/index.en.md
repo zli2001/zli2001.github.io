@@ -8,7 +8,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 description: "Trouble shooting of deploying github pages"
 
-tags: ["troubleshooting"]
+tags: ["hugo"]
 categories: ["Blog"]
 
 
