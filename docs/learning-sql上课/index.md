@@ -337,3 +337,38 @@ GRADE CHECK
 
 ### 参照完整性
 
+### 触发器
+
+'''sql
+
+--触发器
+USE teaching
+GO
+IF EXISTS(SELECT *
+		  FROM SYSOBJECTS
+		  WHERE NAME='tri1'
+		  AND TYPE='TR')
+	DROP TRIGGER tri1
+	GO
+
+CREATE TRIGGER tri1
+ON score
+for insert,update
+AS
+	DECLARE @x int
+	SELECT @x=final
+	FROM INSERTED
+	IF @x >=0 and @x<=-100
+	BEGIN 
+		PRINT ('插入完成')
+		RETURN  
+	END
+	ELSE 
+		BEGIN PRINT('分数不在0-100的')
+		rollback --(transaction)
+		END
+	GO
+
+'''
+
+

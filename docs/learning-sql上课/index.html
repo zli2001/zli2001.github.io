@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>SQL上课 - </title><meta name="Description" content="Notes of STL"><meta property="og:title" content="SQL上课" />
+        <title>SQL上课 - 兰州手卷</title><meta name="Description" content="Notes of STL"><meta property="og:title" content="SQL上课" />
 <meta property="og:description" content="Notes of STL" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/" /><meta property="og:image" content="https://kliiu.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-01T19:04:06+08:00" />
-<meta property="article:modified_time" content="2022-04-27T19:29:30+08:00" />
+<meta property="article:modified_time" content="2022-04-27T19:04:06+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kliiu.github.io/logo.png"/>
@@ -34,8 +34,8 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "code, STL","wordcount":  3645 ,
-        "url": "https:\/\/kliiu.github.io\/learning-sql%E4%B8%8A%E8%AF%BE\/","datePublished": "2022-04-01T19:04:06+08:00","dateModified": "2022-04-27T19:29:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "code, STL","wordcount":  3757 ,
+        "url": "https:\/\/kliiu.github.io\/learning-sql%E4%B8%8A%E8%AF%BE\/","datePublished": "2022-04-01T19:04:06+08:00","dateModified": "2022-04-27T19:04:06+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -53,7 +53,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="">兰州手卷</a>
+            <a href="/" title="兰州手卷">兰州手卷</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/kliiu/kliiu.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -77,7 +77,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="">兰州手卷</a>
+                <a href="/" title="兰州手卷">兰州手卷</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -116,7 +116,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SQL上课</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a>&nbsp;<a href="/categories/stl/"><i class="far fa-folder fa-fw"></i>STL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-01">2022-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3645 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-01">2022-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3757 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;<span id="/learning-sql%E4%B8%8A%E8%AF%BE/" class="leancloud_visitors" data-flag-title="SQL上课">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -142,6 +142,7 @@
         <li><a href="#域完整性约束">域完整性约束</a></li>
         <li><a href="#实体完整性">实体完整性</a></li>
         <li><a href="#参照完整性">参照完整性</a></li>
+        <li><a href="#触发器">触发器</a></li>
       </ul>
     </li>
   </ul>
@@ -771,7 +772,36 @@ FROM Zia</p>
 <p>GRADE CHECK</p>
 <h3 id="实体完整性">实体完整性</h3>
 <p>主键（自动）</p>
-<h3 id="参照完整性">参照完整性</h3></div><div class="post-footer" id="post-footer">
+<h3 id="参照完整性">参照完整性</h3>
+<h3 id="触发器">触发器</h3>
+<p>&lsquo;&lsquo;&lsquo;sql</p>
+<p>&ndash;触发器
+USE teaching
+GO
+IF EXISTS(SELECT *
+FROM SYSOBJECTS
+WHERE NAME=&lsquo;tri1&rsquo;
+AND TYPE=&lsquo;TR&rsquo;)
+DROP TRIGGER tri1
+GO</p>
+<p>CREATE TRIGGER tri1
+ON score
+for insert,update
+AS
+DECLARE @x int
+SELECT @x=final
+FROM INSERTED
+IF @x &gt;=0 and @x&lt;=-100
+BEGIN 
+PRINT (&lsquo;插入完成&rsquo;)
+RETURN<br>
+END
+ELSE 
+BEGIN PRINT(&lsquo;分数不在0-100的&rsquo;)
+rollback &ndash;(transaction)
+END
+GO</p>
+<p>&rsquo;&rsquo;&rsquo;</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

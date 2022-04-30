@@ -1,12 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title></title>
+        <title>兰州手卷</title>
         <link>https://kliiu.github.io/</link>
         <description>About Me</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</lastBuildDate>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 30 Apr 2022 22:18:43 &#43;0800</lastBuildDate>
             <atom:link href="https://kliiu.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>2022泰迪杯总结</title>
+    <link>https://kliiu.github.io/tidicup2022/</link>
+    <pubDate>Sat, 30 Apr 2022 22:18:43 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/tidicup2022/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/aoliao.png" referrerpolicy="no-referrer">
+            </div><p>2022泰迪杯数据挖掘挑战赛C题总结</p>]]></description>
+</item><item>
     <title>SQL and Pandas</title>
     <link>https://kliiu.github.io/learning-sql_pandas/</link>
     <pubDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</pubDate>
@@ -69,12 +78,5 @@
     <author>Author</author>
     <guid>https://kliiu.github.io/trouble-%E9%A3%8E%E6%89%87%E5%BC%82%E5%93%8D/</guid>
     <description><![CDATA[<p>  从前一阵开始，电脑底部右边就开始发出奇怪的响声，时而剧烈，时而又消失，在电脑被微微抬起时尤为严重。</p>]]></description>
-</item><item>
-    <title>SQL上课</title>
-    <link>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</link>
-    <pubDate>Fri, 01 Apr 2022 19:04:06 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</guid>
-    <description><![CDATA[<p>SQL上课笔记</p>]]></description>
 </item></channel>
 </rss>

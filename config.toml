@@ -9,13 +9,6 @@ theme = "LoveIt"
 # 主题目录
 themesDir = "/themes"
 ignoreErrors = ["error-remote-getjson"]
-#更新时间
-enableGitInfo = true
-[frontmatter]
-  date = ['date', 'publishDate', 'lastmod']
-  expiryDate = ['expiryDate']
-  lastmod = [":fileModTime", "lastmod"]
-  publishDate = ['publishDate', 'date']
 
 # website title
 # 网站标题
