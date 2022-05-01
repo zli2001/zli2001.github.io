@@ -1,5 +1,28 @@
-# 2022泰迪杯总结
+---
+title: "2022泰迪杯总结"
+subtitle: ""
+date: 2022-04-30T22:18:43+08:00
+lastmod: 2022-04-30T22:18:43+08:00
+draft: false
+author: "kliiu"
+authorLink: "https://kliiu.github.io"
+description: ""
 
+tags: ["Python","data"]
+categories: ["Reflection"]
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
+license: ""
+---
 
 2022泰迪杯数据挖掘挑战赛C题总结
 
@@ -45,4 +68,3 @@
 3. 了解到了HanLP这个十分强大的开源自然语言处理工具，后续可以做一些文档翻译的贡献。
    
      
-

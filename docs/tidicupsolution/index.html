@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>2022泰迪杯数据挖掘挑战赛C题思路 - 兰州手卷</title><meta name="Description" content="About Me"><meta property="og:title" content="2022泰迪杯数据挖掘挑战赛C题思路" />
+<meta property="og:description" content="2022泰迪杯数据挖掘挑战赛C题思路" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kliiu.github.io/tidicupsolution/" /><meta property="og:image" content="https://kliiu.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-01T12:18:43+08:00" />
+<meta property="article:modified_time" content="2022-05-01T12:18:43+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kliiu.github.io/logo.png"/>
+
+<meta name="twitter:title" content="2022泰迪杯数据挖掘挑战赛C题思路"/>
+<meta name="twitter:description" content="2022泰迪杯数据挖掘挑战赛C题思路"/>
+<meta name="application-name" content="兰州手卷">
+<meta name="apple-mobile-web-app-title" content="兰州手卷"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kliiu.github.io/tidicupsolution/" /><link rel="prev" href="https://kliiu.github.io/tidicup2022/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2022泰迪杯数据挖掘挑战赛C题思路",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kliiu.github.io\/tidicupsolution\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "Python, data","wordcount":  2716 ,
+        "url": "https:\/\/kliiu.github.io\/tidicupsolution\/","datePublished": "2022-05-01T12:18:43+08:00","dateModified": "2022-05-01T12:18:43+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/kliiu.github.io\/images\/avatar.png",
+                    "width":  1437 ,
+                    "height":  1437 
+                }},"author": {
+                "@type": "Person",
+                "name": "kliiu"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="兰州手卷">兰州手卷</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/kliiu/kliiu.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="兰州手卷">兰州手卷</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/kliiu/kliiu.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">2022泰迪杯数据挖掘挑战赛C题思路</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/reflection/"><i class="far fa-folder fa-fw"></i>Reflection</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-01">2022-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2716 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;<span id="/tidicupsolution/" class="leancloud_visitors" data-flag-title="2022泰迪杯数据挖掘挑战赛C题思路">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="aoliao.png"
+        data-srcset="/tidicupsolution/aoliao.png, aoliao.png 1.5x, /tidicupsolution/aoliao.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/aoliao.png"
+        title="/tidicupsolution/aoliao.png" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#第一题">第一题</a>
+      <ul>
+        <li><a href="#文本预处理">文本预处理</a></li>
+        <li><a href="#相关性分析">相关性分析</a></li>
+      </ul>
+    </li>
+    <li><a href="#过程">过程</a>
+      <ul>
+        <li><a href="#论文">论文</a></li>
+      </ul>
+    </li>
+    <li><a href="#第二题">第二题</a>
+      <ul>
+        <li><a href="#what-did-i-do">What did I do</a></li>
+      </ul>
+    </li>
+    <li><a href="#第三题">第三题</a>
+      <ul>
+        <li><a href="#问题分析">问题分析：</a></li>
+        <li><a href="#面向开放领域文本的实体关系抽取郭喜跃">《面向开放领域文本的实体关系抽取》郭喜跃：</a>
+          <ul>
+            <li><a href="#32-关系的句法语义特征向量的构建">3.2 关系的句法语义<strong>特征向量</strong>的构建</a>
+              <ul>
+                <li><a href="#321依存句法分析通过分析依存关系揭示句法结构">3.2.1依存句法分析：通过分析依存关系揭示句法结构。</a></li>
+                <li><a href="#322-语义角色标注以谓词为支点分析并标注各短语在句子中的语义成分">3.2.2 语义角色标注:以谓词为支点，分析并标注各短语在句子中的语义成分。</a></li>
+                <li><a href="#323-核心谓语与实体的位置距离关系">3.2.3 核心谓语与实体的位置距离关系</a></li>
+              </ul>
+            </li>
+            <li><a href="#关系分类训练模型">关系分类训练模型</a></li>
+            <li><a href="#todo">todo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>2022泰迪杯数据挖掘挑战赛C题思路</p>
+<h1 id="2022泰迪杯">2022泰迪杯</h1>
+<h2 id="题目">题目</h2>
+<ol>
+<li>微信公众号文章分类：
+<ul>
+<li>二分类问题</li>
+</ul>
+</li>
+<li>周边游产品热度分析：
+<ul>
+<li>提取产品和语料</li>
+<li>建立多维热度评价模型，按年度进行热度分析并排名</li>
+</ul>
+</li>
+<li>构建旅游图谱
+<ul>
+<li>关联度分析</li>
+<li>构建以景区、酒店、餐饮为核心的强关联模式</li>
+<li>进行可视化分析</li>
+</ul>
+</li>
+<li>产品需求的变化分析
+<ul>
+<li>分析疫情前后旅游产品的变化</li>
+<li>写一封信提出政策建议</li>
+</ul>
+</li>
+</ol>
+<h2 id="第一题">第一题</h2>
+<h3 id="文本预处理">文本预处理</h3>
+<ol>
+<li>数据清洗去重</li>
+</ol>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 不排除 标题与文章不符合的情况，因此把标题与文章以同等地位来看</li>
+<li><i class="far fa-check-square fa-fw"></i> 字符乱码</li>
+<li><i class="far fa-check-square fa-fw"></i> 文本长度分析</li>
+</ul>
+<ol start="2">
+<li>分词</li>
+</ol>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> jieba</li>
+</ul>
+<ol start="3">
+<li>去停用词</li>
+</ol>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 中文的语气词以及标点符号和特殊字符</li>
+</ul>
+<h3 id="相关性分析">相关性分析</h3>
+<p>TODO：</p>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 如果content含有文旅词典中的词，则记录文章ID,最终得到相关的文章ID和不相关的</li>
+<li><i class="far fa-check-square fa-fw"></i> 文旅词典的构建：<del>爬取文旅相关文章并提取关键词，加入文旅词典</del>（人工去除不相关的词）</li>
+<li><i class="far fa-check-square fa-fw"></i> 爬虫检索已有词汇的近义词，将他们加入我们的词典。</li>
+<li><i class="far fa-check-square fa-fw"></i> 把相关和不相关的分开，按<del>平均值</del></li>
+<li><i class="far fa-check-square fa-fw"></i> 爬取节假日词</li>
+<li><i class="far fa-check-square fa-fw"></i> 语料库http://ccl.pku.edu.cn:8080/ccl_corpus/search?dir=xiandai&amp;q=%E6%96%87%E5%8C%96%E6%97%85%E6%B8%B8&amp;LastQuery=%E6%96%87%E5%8C%96%E6%97%85%E6%B8%B8&amp;start=350&amp;num=50&amp;index=FullIndex&amp;outputFormat=HTML&amp;orderStyle=score&amp;encoding=UTF-8&amp;neighborSortLength=0&amp;maxLeftLength=30&amp;maxRightLength=30&amp;isForReading=no&amp;scopestr=</li>
+</ul>
+<h2 id="过程">过程</h2>
+<ol>
+<li>
+<p>分词</p>
+</li>
+<li>
+<p>爬虫</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/rxxaa123/p/14262721.html" target="_blank" rel="noopener noreffer">参考1</a></p>
+<p><a href="https://blog.csdn.net/weixin_59071011/article/details/118388556" target="_blank" rel="noopener noreffer">参考2</a></p>
+</blockquote>
+<ul>
+<li>
+<p>安装requests库</p>
+</li>
+<li>
+<p>爬取<a href="https://kmcha.com/similar/" target="_blank" rel="noopener noreffer">近义词网站</a>保存所有的词语为一个新的词典</p>
+<p>删除一些不相关的词“体现”，“清楚”以及单字 <img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="%e6%97%a0%e5%85%b3%e8%af%8d.png"
+        data-srcset="/tidicupsolution/%E6%97%A0%E5%85%B3%E8%AF%8D.png, %e6%97%a0%e5%85%b3%e8%af%8d.png 1.5x, /tidicupsolution/%E6%97%A0%E5%85%B3%E8%AF%8D.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/%E6%97%A0%E5%85%B3%E8%AF%8D.png"
+        title="词" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>制作词表：</p>
+<ol>
+<li>首先对爬取的近义词网站的词语做分析并加入词典</li>
+<li>对爬取中国文旅网的词语做分析并加入词典</li>
+<li>对爬取语料库的的词语做分析并加入词典</li>
+</ol>
+</li>
+<li>
+<p>相关性分析：</p>
+<ol>
+<li>
+<p>计数每篇文章各包含词表的多少个单词</p>
+</li>
+<li>
+<p>对此数据做分析，每篇文章标题包含词表单词个数/每篇文章标题词数=title_fre。每篇文章包含词表单词个数/每篇文章词数=content_fre，最终fre=title_fre<em>0.7+content_fre</em>(1-0.7).</p>
+<p>分析fre当此值超过 *一列fre的25%分位数，*则标记为相关，否则标记为不相关。<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="box.png"
+        data-srcset="/tidicupsolution/box.png, box.png 1.5x, /tidicupsolution/box.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/box.png"
+        title="bx" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="论文">论文</h3>
+<p>《结合注意力机制的长文本分类方法》:</p>
+<ul>
+<li>
+<p><strong>abstract</strong>:  发现和过滤这种与主题相关性低的句子，加大对文本局部信息的注意力，可在提高长文本分类效率的同时，改善其分类效果。</p>
+</li>
+<li>
+<p>文本信息过滤：</p>
+<blockquote>
+<p>基于词袋去停用词、去高频词；丢失了词序信息
+特征提取：互信息，信息增益，卡方值。</p>
+</blockquote>
+</li>
+<li>
+<p>特征表示方法</p>
+<blockquote>
+<p>词向量：向量加是一种简单有效的语义组合方法，但是该方法与 BOW 模型一样忽略了词序信息
+分布式记忆模型( Distributed Memory model of Paragraph Vectors，PVDM)，可将任意长度文本表示为定长的段落向量使句子级信息过滤成为可能</p>
+</blockquote>
+</li>
+<li>
+<p>改善文本分析效果： attention机制</p>
+</li>
+<li>
+<p><strong>总结</strong>：结合注意力机制的文本过滤方法及分类模型。</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>建立过滤后文本的分类性能</li>
+<li>根据句子注意力进行信息过滤</li>
+<li>构建结合句子注意力的卷积神经网络分类模型，改善过滤后文本的分类性能</li>
+</ol>
+</blockquote>
+<h2 id="第二题">第二题</h2>
+<h3 id="what-did-i-do">What did I do</h3>
+<p>先把每一年的所有语料提取出来，再分别提取每一条的产品。把酒店、景区、餐饮店名全部加入白名单。提取后对于同样或相似的产品,将产品ID改为一样。</p>
+<ul>
+<li>游记年份统一以出发时间为准酒店评论以入住日期为准。</li>
+<li>微信公众号不考虑因为不能衡量热度。</li>
+<li>若出发时间缺失则以发布时间为准。若出发时间为不在（2020-2021）则认为是无效数据。</li>
+</ul>
+<ol>
+<li>
+<p>安装hanlp</p>
+</li>
+<li>
+<p>安装full,包括了<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="pip.png"
+        data-srcset="/tidicupsolution/pip.png, pip.png 1.5x, /tidicupsolution/pip.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/pip.png"
+        title="tf" /></p>
+</li>
+<li>
+<p>下载到C:\Users\k\AppData\Roaming\hanlp</p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/gstblog/p/9233566.html" target="_blank" rel="noopener noreffer">https://www.cnblogs.com/gstblog/p/9233566.html</a> str函数错误</p>
+</li>
+<li>
+<p>预处理、规定。（对于微信公众号的内容本部分不涉及，）</p>
+<ol>
+<li>首先<a href="https://blog.csdn.net/qq_19309473/article/details/110952091" target="_blank" rel="noopener noreffer">繁体字转简体字</a>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="fanti.png"
+        data-srcset="/tidicupsolution/fanti.png, fanti.png 1.5x, /tidicupsolution/fanti.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/fanti.png"
+        title="fanti" /></li>
+<li>建立中国行政区划词典去除省、市地名。</li>
+<li>建立全世界国家词典</li>
+<li>建立其他词典，如中国、潮汕等非行政区划地名。</li>
+<li>若同一评论提取到的多个相同实体记为一次。</li>
+<li>除游记以外，酒店、餐饮、景区名称去除括号内的内容，并将这些名称加入提取白名单。白名单词典中的词语会尽量被输出。</li>
+<li>(其实提取实体并不需要完全提取，比如“国际大饭店”，可以提取语料，再人工判断。)</li>
+</ol>
+</li>
+<li>
+<p>对每一句评论：</p>
+<ol>
+<li>
+<p>先分词</p>
+</li>
+<li>
+<p>再实体提取(利用HanLP命名实体识别模块）</p>
+<p>第一次用MSRA_NER_ELECTRA_SMALL_ZH。后面更换为(hanlp.pretrained.ner.MSRA_NER_BERT_BASE_ZH)</p>
+</li>
+<li>
+<p>取出实体类型为地名、机构名的</p>
+</li>
+<li>
+<p>对于去除特殊符号以后，实体长度&gt;2的：</p>
+</li>
+<li>
+<p>若实体名称不为行政区划、其他词典里的词则将词语加入提取的实体列表。从而得到每一条评论提取出的<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="entities.png"
+        data-srcset="/tidicupsolution/entities.png, entities.png 1.5x, /tidicupsolution/entities.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/entities.png"
+        title="实体列表" /></p>
+</li>
+<li>
+<p>由于游记字数分布十分不均匀，影响模型性能。因此将大于4000字的游记攻略提取出来，进行分割。将其分为原始长度的一半再进行提取。<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="youjibox.png"
+        data-srcset="/tidicupsolution/youjibox.png, youjibox.png 1.5x, /tidicupsolution/youjibox.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/youjibox.png"
+        title="youji" /></p>
+</li>
+<li>
+<p>最后将提取出的实体与数据已有的产品ID合并<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="yiyou.png"
+        data-srcset="/tidicupsolution/yiyou.png, yiyou.png 1.5x, /tidicupsolution/yiyou.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/yiyou.png"
+        title="image-20220429001822581" /></p>
+</li>
+<li>
+<p>对提取后的表进行相似度分析<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="sim.png"
+        data-srcset="/tidicupsolution/sim.png, sim.png 1.5x, /tidicupsolution/sim.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/sim.png"
+        title="image-20220428224350019" />将相似的合并</p>
+</li>
+<li>
+<p>人工去重<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="image-20220428230303404.png"
+        data-srcset="image-20220428230303404.png, image-20220428230303404.png 1.5x, image-20220428230303404.png 2x"
+        data-sizes="auto"
+        alt="image-20220428230303404.png"
+        title="image-20220428230303404" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="sim3.png"
+        data-srcset="/tidicupsolution/sim3.png, sim3.png 1.5x, /tidicupsolution/sim3.png 2x"
+        data-sizes="auto"
+        alt="/tidicupsolution/sim3.png"
+        title="image-20220428233653516" /></p>
+<p>从9833条语料中提取出 1741个实体。</p>
+<h2 id="第三题">第三题</h2>
+<p>假设将各分店看为一家店分析关联模式。</p>
+<h3 id="问题分析">问题分析：</h3>
+<p>对于问题2中依托海量信息提取出的实体，如果仅仅只靠传统的分析技术，难以对其内在关联进行有效的捕捉。此外，由于文本数据庞大，且来源复杂，造成其实体关系特征稀疏，比如关系实例并无清晰的关系词或有歧义等。如：【面向开发领域文本的实体关系抽取】然而本题中虽然文本规模巨大，但是涉及领域并不多，因此可以只对其包含的几种实体关系类型进行分析研究。在以景区、酒店、餐饮为核心的强关联模式的要求下，我们重点挖掘这三类已提取出的实体之间的关系，提取核心旅游产品，并构建基于图的本地旅游图谱。</p>
+<h3 id="面向开放领域文本的实体关系抽取郭喜跃">《面向开放领域文本的实体关系抽取》郭喜跃：</h3>
+<p>评价实体关系抽取性能优劣的指标。</p>
+<p>（1）一种基于句法语义特征的实体关系抽取方法。</p>
+<pre><code>特征选择：词法分析、上下文环境、依存语法特征、语义角色标注特征以及核心谓词与实体的位置距离特征。
+
+机器学习方法：以SVM模型为基础，构建基于特征空间转换的训练模型。
+</code></pre>
+<h4 id="32-关系的句法语义特征向量的构建">3.2 关系的句法语义<strong>特征向量</strong>的构建</h4>
+<h5 id="321依存句法分析通过分析依存关系揭示句法结构">3.2.1依存句法分析：通过分析依存关系揭示句法结构。</h5>
+<p>中国-主席-习近平</p>
+<p>美国-总统-奥巴马</p>
+<h5 id="322-语义角色标注以谓词为支点分析并标注各短语在句子中的语义成分">3.2.2 语义角色标注:以谓词为支点，分析并标注各短语在句子中的语义成分。</h5>
+<p>实体的类型和实体对的组合隐性暗示它在语义角色标注结果这的位置和作用。</p>
+<h5 id="323-核心谓语与实体的位置距离关系">3.2.3 核心谓语与实体的位置距离关系</h5>
+<p>实体与核心谓语的平均距离和实体与普通谓语的平均距离有明显差距，后者是前者的1.5倍。</p>
+<h4 id="关系分类训练模型">关系分类训练模型</h4>
+<h4 id="todo">todo</h4>
+<ul>
+<li>
+<p><i class="far fa-check-square fa-fw"></i> 图标号</p>
+</li>
+<li>
+<p><i class="far fa-check-square fa-fw"></i> 签字</p>
+</li>
+<li>
+<p><i class="far fa-square fa-fw"></i> 整理代码</p>
+</li>
+<li>
+<p><i class="far fa-check-square fa-fw"></i> 画图</p>
+</li>
+<li>
+<p><i class="far fa-square fa-fw"></i> 第三题结果</p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/tidicupsolution/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://kliiu.github.io/tidicupsolution/" data-title="2022泰迪杯数据挖掘挑战赛C题思路" data-hashtags="Python,data"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://kliiu.github.io/tidicupsolution/" data-hashtag="Python"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://kliiu.github.io/tidicupsolution/" data-title="2022泰迪杯数据挖掘挑战赛C题思路"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://kliiu.github.io/tidicupsolution/" data-title="2022泰迪杯数据挖掘挑战赛C题思路"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://kliiu.github.io/tidicupsolution/" data-title="2022泰迪杯数据挖掘挑战赛C题思路" data-image="aoliao.png" data-ralateuid="7724960004"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/data/">data</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/tidicup2022/" class="prev" rel="prev" title="2022泰迪杯总结"><i class="fas fa-angle-left fa-fw"></i>2022泰迪杯总结</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://kliiu.github.io/about" target="_blank">兰州手卷</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"L3OLB1Srodf9aMM4eQ260ejd-gzGzoHsz","appKey":"goeeaRlOtsIvpkYGKBTEkan3","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://l3olb1sr.lc-cn-n1-shared.com","visitor":true}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
