@@ -14,8 +14,7 @@ categories: ["Reflection"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-featuredImage: "aoliao.png"
-featuredImagePreview: ""
+
 
 toc:
   enable: true
