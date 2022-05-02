@@ -34,7 +34,7 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "Python, code, flask","wordcount":  2050 ,
+                        }],"genre": "posts","keywords": "Python, code, flask","wordcount":  2515 ,
         "url": "https:\/\/kliiu.github.io\/learning-flask\/","datePublished": "2022-04-21T10:09:58+08:00","dateModified": "2022-04-26T20:27:34+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Flask Learning</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-21">2022-04-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2050 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;<span id="/learning-flask/" class="leancloud_visitors" data-flag-title="Flask Learning">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-21">2022-04-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2515 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;<span id="/learning-flask/" class="leancloud_visitors" data-flag-title="Flask Learning">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -156,6 +156,11 @@
         <li><a href="#511数据库迁移">5.11数据库迁移</a></li>
       </ul>
     </li>
+    <li><a href="#6电子邮件">6电子邮件</a>
+      <ul>
+        <li><a href="#使用gmail">使用gmail</a></li>
+      </ul>
+    </li>
     <li><a href="#7-大型项目的结构">7 大型项目的结构</a>
       <ul>
         <li><a href="#项目结构">项目结构</a></li>
@@ -168,6 +173,9 @@
         <li><a href="#需求文件">需求文件</a></li>
         <li><a href="#76单元测试">7.6单元测试</a></li>
         <li><a href="#77创建数据库">7.7创建数据库</a></li>
+        <li><a href="#85-注册用户">8.5 注册用户</a></li>
+        <li><a href="#86确认账户">8.6确认账户</a></li>
+        <li><a href="#发送确认邮件">发送确认邮件</a></li>
       </ul>
     </li>
   </ul>
@@ -377,6 +385,16 @@ index()被称为视图函数</li>
 <h3 id="510集成python-shell">5.10集成Python shell</h3>
 <h3 id="511数据库迁移">5.11数据库迁移</h3>
 <p>更新表的更好方法是使用数据库迁移框架。数据库迁移框架能跟踪数据库模式的变化，然后增量式的把变化应用到数据库中。</p>
+<h2 id="6电子邮件">6电子邮件</h2>
+<h3 id="使用gmail">使用gmail</h3>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">千万不要把账户密令直接写入脚本，特别是当你计划开源自己的作品时。为 了保护账户信息，你需要让脚本从环境中导入敏感信息</div>
+        </div>
+    </div>
 <h2 id="7-大型项目的结构">7 大型项目的结构</h2>
 <h3 id="项目结构">项目结构</h3>
 <ul>
@@ -417,7 +435,34 @@ index()被称为视图函数</li>
 <p>生成
 <code>pip freeze &gt;requirements.txt</code></p>
 <h3 id="76单元测试">7.6单元测试</h3>
-<h3 id="77创建数据库">7.7创建数据库</h3></div><div class="post-footer" id="post-footer">
+<h3 id="77创建数据库">7.7创建数据库</h3>
+<h3 id="85-注册用户">8.5 注册用户</h3>
+<p>写完这一章后有好几天没有打开项目，今天再打开突然全部报错Internal error!
+到后来也没有解决。&ndash;2022.5.1</p>
+<h3 id="86确认账户">8.6确认账户</h3>
+<p>&ndash;2022.5.2再打开项目，又可以运行了。
+验证电子邮件地址。
+itsdangerous 提供了多种生成令牌的方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">itsdangerous</span> <span class="kn">import</span> <span class="n">TimedJSONWebSignatureSerializer</span> <span class="k">as</span> <span class="n">Serializer</span> <span class="c1">#TimedJSONWebSignatureSerializer 类生成具有过期时间的 JSON Web 签名（JSON Web Signatures，JWS）。</span>
+</span></span><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">expires_in</span> <span class="o">=</span> <span class="mi">3600</span><span class="p">)</span><span class="c1">#这个类的构造函数接收</span>
+</span></span><span class="line"><span class="cl"><span class="n">的参数是一个密钥</span><span class="err">，</span><span class="n">在</span> <span class="n">Flask</span> <span class="n">程序中可使用</span> <span class="n">SECRET_KEY</span> <span class="n">设置</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#expires_in 参数设置令牌的过期时间，单位为秒。</span>
+</span></span><span class="line"><span class="cl"><span class="n">token</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span> <span class="s1">&#39;confirm&#39;</span><span class="p">:</span> <span class="mi">23</span> <span class="p">})</span><span class="c1">#dumps() 方法为指定的数据生成一个加密签名，然后再对数据和签名进行序列化，生成令 牌字符串。</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于模型中新加入了一个列用来保存账户的确认状态，因此要生成并执行一 个新数据库迁移。</p>
+<h3 id="发送确认邮件">发送确认邮件</h3>
+<p>当前的 /register 路由把新用户添加到数据库中后，会重定向到 /index。在重定向之前，这 个路由需要发送确认邮件。</p>
+<p>更改app/auth/views.py</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

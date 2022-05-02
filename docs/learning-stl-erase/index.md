@@ -1,18 +1,5 @@
----
-title: "STL erase()用法"
-date: 2022-03-24T21:13:25+08:00
-draft: false
+# STL erase()用法
 
-lastmod: 2022-03-24T21:13:25+08:00
-draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
-description: "Notes of STL"
-tags: ["STL"]
-categories: ["STL"]
-
-lightgallery: true
----
 C++ STL中erase有三种用法：
 <!--more-->
 **注意可以删除一段元素，但不包括最后一个元素**

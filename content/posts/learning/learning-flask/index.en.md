@@ -150,6 +150,17 @@ class User(db.Model):
 ### 5.10集成Python shell
 ### 5.11数据库迁移
 更新表的更好方法是使用数据库迁移框架。数据库迁移框架能跟踪数据库模式的变化，然后增量式的把变化应用到数据库中。
+
+## 6电子邮件
+
+### 使用gmail
+
+{{< admonition  note "Note">}}
+
+千万不要把账户密令直接写入脚本，特别是当你计划开源自己的作品时。为 了保护账户信息，你需要让脚本从环境中导入敏感信息
+
+{{< /admonition>}}
+
 ## 7 大型项目的结构
 ### 项目结构
 - Flask 程序一般都保存在名为 app 的包中；
@@ -181,3 +192,31 @@ from . import views, errors
 
 ### 7.6单元测试
 ### 7.7创建数据库
+
+
+### 8.5 注册用户
+写完这一章后有好几天没有打开项目，今天再打开突然全部报错Internal error!
+到后来也没有解决。--2022.5.1
+### 8.6确认账户
+--2022.5.2再打开项目，又可以运行了。
+验证电子邮件地址。
+itsdangerous 提供了多种生成令牌的方法。
+
+```python
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #TimedJSONWebSignatureSerializer 类生成具有过期时间的 JSON Web 签名（JSON Web Signatures，JWS）。
+s = Serializer(app.config['SECRET_KEY'], expires_in = 3600)#这个类的构造函数接收
+的参数是一个密钥，在 Flask 程序中可使用 SECRET_KEY 设置。
+#expires_in 参数设置令牌的过期时间，单位为秒。
+token = s.dumps({ 'confirm': 23 })#dumps() 方法为指定的数据生成一个加密签名，然后再对数据和签名进行序列化，生成令 牌字符串。
+```
+
+
+
+由于模型中新加入了一个列用来保存账户的确认状态，因此要生成并执行一 个新数据库迁移。
+
+### 发送确认邮件
+
+当前的 /register 路由把新用户添加到数据库中后，会重定向到 /index。在重定向之前，这 个路由需要发送确认邮件。
+
+更改app/auth/views.py
+
