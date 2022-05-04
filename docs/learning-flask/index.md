@@ -37,6 +37,7 @@ app = Flask(__name__)
 如果部署程序的服务器域名为 www. example.com，在浏览器中访问 http://www.example.com 后，会触发服务器执行 index() 函 数。这个函数的返回值称为响应，是客户端接收到的内容。如果客户端是 Web 浏览器，响
 应就是显示给用户查看的文档。
 {{< /admonition >}}
+
 ```python
 @app.route('/')
 def index():#把index()注册为程序根地址的处理程序，当访问网址后会触发服务器执行index()
@@ -44,7 +45,7 @@ def index():#把index()注册为程序根地址的处理程序，当访问网址
 
 ```
 - 视图函数
-index()被称为视图函数
+像index()这样的函数被称为视图函数。它返回的响应可以是包含HTML的简单字符串，也可以是复杂表单
 
 
 
@@ -146,6 +147,12 @@ class User(db.Model):
 
 {{< /admonition>}}
 
+`set MAIL_USERNAME=klliiuuu`设置用户名及密码
+
+发送邮件失败，需要设置google应用专用密码。
+
+打开pop设置后需要按保存！
+
 ## 7 大型项目的结构
 ### 项目结构
 - Flask 程序一般都保存在名为 app 的包中；
@@ -182,6 +189,9 @@ from . import views, errors
 ### 8.5 注册用户
 写完这一章后有好几天没有打开项目，今天再打开突然全部报错Internal error!
 到后来也没有解决。--2022.5.1
+
+## 8 用户认证
+
 ### 8.6确认账户
 --2022.5.2再打开项目，又可以运行了。
 验证电子邮件地址。
@@ -199,10 +209,79 @@ token = s.dumps({ 'confirm': 23 })#dumps() 方法为指定的数据生成一个�
 
 由于模型中新加入了一个列用来保存账户的确认状态，因此要生成并执行一 个新数据库迁移。
 
-### 发送确认邮件
+#### 发送确认邮件
+
+[os.environ.get('MAIL_USERNAME')为None的解决办法](https://www.javazxz.com/thread-11481-1-1.html)
+
+(saved my ass)
 
 当前的 /register 路由把新用户添加到数据库中后，会重定向到 /index。在重定向之前，这 个路由需要发送确认邮件。
 
 更改app/auth/views.py
+
+## 10 用户资料
+
+### 10.1资料信息
+
+### 10.2 资料页面
+
+### 10.3 资料编辑器
+
+### 10.4 用户头像
+
+## 11 博客文章
+
+### 11.1
+
+1. 创建数据库文章模型
+
+文章包括正文、时间戳以及和User之间的多对一关系。
+
+2. 写文章的表单
+
+3. 显示文章的首页模板
+
+   NameError: name 'Post' is not defined
+
+   报这个错误原因在于manager.py中没有引入Post,解决方法:
+
+   ```python
+   from app.models import User, Role, Post
+   
+   def make_shell_context():
+   
+       return dict(app=app, db=db, User=User, Role=Role, Post=Post)
+   ```
+
+   
+
+### 11.2 在资料页显示博客文章
+
+### 11.3 创建虚拟博客文章数据
+
+1. 安装forgeryPy 生成虚拟用户和博客文章
+
+### 11.4 显示MarkDown
+
+1. 安装flask-pagedown markdown bleach
+
+   - PageDown：使用 JavaScript 实现的客户端 Markdown 到HTML的转换程序。 
+
+   - Flask-PageDown：为 Flask 包装的 PageDown，把 PageDown 集成到 Flask-WTF 表单中。 
+
+   - Markdown：使用 Python 实现的服务器端 Markdown 到HTML的转换程序。
+   - Bleach：使用 Python 实现的HTML清理器。
+
+2. 将首页的多行文本控件转换为Markdown富文本编辑器。
+
+### 11.6 博客文章编辑器
+
+1. 下载安装了sqlite. (C:/sqlite)https://blog.csdn.net/qq_38693757/article/details/122366390
+
+## 17 部署
+
+### 17.1 部署流程
+
+- 自动化部署
 
 
