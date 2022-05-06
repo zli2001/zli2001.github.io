@@ -496,18 +496,20 @@ class WriteAFile {
   
   - `public boolean equals(String s)`
   
+    **字符串不能用==直接比较**，这是比较地址！要用equals.
+  
   ```java
   String tom=new String("天道酬勤")
   String jerry=new String("天道酬勤")
   ```
         tom.equals(jerry)的值是true
         tom==jerry的值是false:因为String对象tom、jerry中存放的是引用
-
+  
   - `public boolean startsWith(String s)`
-  - `public boolean endWith(String s)`
-  - `public String sunstring(int startpoint)`
-	`String tom = "我喜欢篮球";
-	`String str = tom.substring(1,3);
+	- `public boolean endWith(String s)`
+	- `public String sunstring(int startpoint)`
+  `String tom = "我喜欢篮球";
+  `String str = tom.substring(1,3);
   - `public String trim()`：去掉前后空格
   - 文件目录符：\\
   
@@ -556,6 +558,20 @@ class WriteAFile {
 ### StringTokenlizer类
 - 无需正则表达式作标记
 - 使用默认的分隔标记：空格，换行，回车，制表，进纸符。
-指定分割标记：`StringTokenlizer fenxi = new StringTokenlizer(s,"(),");//(),的任意排列都是一个分隔符`
+  指定分割标记：`StringTokenlizer fenxi = new StringTokenlizer(s,"(),");//(),的任意排列都是一个分隔符`
   
-  
+
+### Scanner类
+
+1. Scanner类对象
+   - 可以调用方法useDelimiter(正则表达式)，以正则表达式作为分割标记。如果不指定分割标记，则以空白字符作为分割标记。（空格，制表符，换行符）
+   - next()方法依次返回解析的单词
+   - nextInt()或nextDouble()代替next方法：将数字型单词转化为int或double
+   - 若单词不是数字，使用nextInt()或nextDouble()将出现异常。 
+
+1. Scanner与StringTokenlizer
+
+
+
+
+   
