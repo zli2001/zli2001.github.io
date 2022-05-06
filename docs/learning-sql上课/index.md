@@ -321,14 +321,18 @@ UPDATE SC SET S#=‘201404001’ WHERE S#=‘201403001’
 * 非授权用户
 
 ### 授权管理*
+
+```sql
 GRANT SELECT,INSERT,UPDATE 
 ON S
 TO xia —-授权给用户xia
+```
 ## 授权回收*
+```sql
 REVOKE INSERT, UPDATE
 ON S
 FROM Zia
-
+```
 ### 域完整性约束
 GRADE CHECK
 
@@ -339,8 +343,7 @@ GRADE CHECK
 
 ### 触发器
 
-'''sql
-
+```sql
 --触发器
 USE teaching
 GO
@@ -368,7 +371,10 @@ AS
 		rollback --(transaction)
 		END
 	GO
+```
 
-'''
+
+
+
 
 
