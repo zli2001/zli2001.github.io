@@ -694,6 +694,7 @@ SELECT * INTO OrdersItems_backup FROM OrderItems;
 
 --18.2.1使用视图简化复杂的联结
 /*
+DROP VIEW IF EXISTS ProductCustomers
 CREATE VIEW ProductCustomers AS --创建视图
 SELECT cust_name, cust_contact, prod_id
 FROM Customers, Orders, OrderItems
