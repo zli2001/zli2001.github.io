@@ -20,12 +20,23 @@
   行
   注
   释
+  
 */
+SELECT prod_name 
+FROM Products
+LIMIT 5 OFFSET 5;
+/*
+LIMIT 5 OFFSET 5 指示 MySQL等DBMS返回从第 5行起的 5行数据。 第一个数字是检索的行数，第二个数字是指从哪儿开始。
+第一个被检索的行是第 0行，而不是第 1行。因此，LIMIT 1 OFFSET 1 会检索第 2行，而不是第 1行。
+*/
+
+
 --2.9.1
 --SELECT cust_id
 --FROM Customers;
 
 --2.9.2
+--DISTINCT 作用于所有列，不仅仅是跟在其后的那一列
 --SELECT DISTINCT prod_id
 --FROM OrderItems;
 
@@ -39,7 +50,7 @@ FROM Customers;
 ```sql
 SELECT prod_name
 FROM Products
-ORDER BY prod_name DESC;--descending
+ORDER BY prod_name DESC;--（descending）DESC关键字只应用到直接位于其前面的列名
 
 --3.6.1
 SELECT cust_name
