@@ -161,7 +161,7 @@ WHERE vend_id IN ('DLL01','BRS01');
 
 SELECT prod_name,vend_id
 FROM Products
-WHERE NOT vend_id IN ('DLL01','BRS01');
+WHERE  vend_id NOT IN ('DLL01','BRS01');
 
 --5.5.1
 SELECT vend_name,vend_state,vend_country
