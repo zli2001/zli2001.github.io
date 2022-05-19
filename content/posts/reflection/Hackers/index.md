@@ -1,6 +1,5 @@
 ---
 title: "Hackers学习交流平台总结"
-subtitle: ""
 date: 2022-05-19T20:18:43+08:00
 lastmod: 2022-05-19T20:18:43+08:00
 draft: false
@@ -12,7 +11,7 @@ tags: ["Python","flask"]
 categories: ["Reflection"]
 
 
-lightgallery: false
+
 featuredImagePreview: index.png
 lightgallery: true
 
