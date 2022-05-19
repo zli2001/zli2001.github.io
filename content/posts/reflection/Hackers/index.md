@@ -11,19 +11,10 @@ description: ""
 tags: ["Python","flask"]
 categories: ["Reflection"]
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
 
-
-
-toc:
-  enable: true
-math:
-  enable: false
 lightgallery: false
 featuredImagePreview: index.png
 lightgallery: true
-license: ""
 
 ---
 
