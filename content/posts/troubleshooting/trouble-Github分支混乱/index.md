@@ -9,7 +9,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 hiddenFromSearch: false
 tags: ["GitHub"]
-categories: ["Troubleshooting"]
+categories: ["消灭bug的感觉无与伦比"]
 
 
 lightgallery: true

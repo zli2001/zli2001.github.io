@@ -16,9 +16,31 @@ categories: ["Coding"]
 lightgallery: true
 ---
 Java learning notes.
+
 <!--more-->
 
+## JetBrains JavaDeveloper
+
+--20220511
+
+### Paradigms
+
+Different approaches to creating programs are called paradigms.
+
+#### Imperative 
+
+- how to do
+- focuses on achieving a result using step-by-step instructions that change the data sequentially.
+- includes Procedural programming paradigm, Object-oriented programming, and Parallel processing approach.
+
+#### Declarative
+
+- what to do
+- focuses on the task and tries to get an expected result.
+- includes Logic, Functional, and Database paradigms.
+
 ## 类与对象
+
 ### 方法
 ```java
 public class 三_1 {
@@ -573,5 +595,3 @@ class WriteAFile {
 
 
 
-
-   
