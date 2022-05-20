@@ -10,9 +10,6 @@ description: ""
 tags: ["Python","flask"]
 categories: ["Reflection"]
 
-
-
-featuredImagePreview: index.png
 lightgallery: true
 
 ---
