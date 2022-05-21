@@ -81,7 +81,7 @@ def get_username(user_id):
 ```
 
 #### 重复使用代码的两种方式：宏和模板继承
-
+**由于"{%"的模板格式会导致博客页面编译报错，因此代码中用“百分号”替代%**
 1. **宏**（macro）：类似python中的函数
 
 定义：
@@ -94,15 +94,15 @@ def get_username(user_id):
 使用：
 ```html
 <!--先引入宏-->
-{% from 'test_1.html' import render_comment %}
+{百分号 from 'test_1.html' import render_comment 百分号}
 
 <!--或者-->
-{% import 'macros.html' as macros %}
+{百分号 import 'macros.html' as macros 百分号}
 <!--再使用宏-->
 <ul>
-    {% for comment in comments %}
+    {百分号 for comment in comments 百分号}
     	{{render_comment(comment)}}
-    {% endfor %}
+    {百分号 endfor 百分号}
 </ul>
 ```
 
@@ -113,15 +113,15 @@ def get_username(user_id):
 
      ```html
      <html> 
-         <head> {% block head %} 
-             <title>{% block title %}
-                 {% endblock %} - My Application
+         <head> {百分号 block head 百分号} 
+             <title>{百分号 block title 百分号}
+                 {百分号 endblock 百分号} - My Application
              </title> 
-             {% endblock %}
+             {百分号 endblock 百分号}
      	</head>
          <body>
-             {% block body %} 
-             {% endblock %}
+             {百分号 block body 百分号} 
+             {百分号 endblock 百分号}
      	</body>
      </html>
      ```
@@ -129,16 +129,16 @@ def get_username(user_id):
      block 标签定义的元素可在衍生模板中修改。在本例中，我们定义了名为 head、title 和 body 的块。注意，title 包含在 head 中。下面这个示例是基模板的衍生模板：
 
      ```html
-     {% extends "base.html" %} <!--声明衍生自base.html-->
-     {% block title %}Index{% endblock %} <!--重新定义基模板中的块-->
-     {% block head %} 
+     {百分号 extends "base.html" 百分号} <!--声明衍生自base.html-->
+     {百分号 block title 百分号}Index{百分号 endblock 百分号} <!--重新定义基模板中的块-->
+     {百分号 block head 百分号} 
          {{ super() }} <!-- 使用super()获取基模板中内容不为空的内容-->
          <style> 
          </style>
-     {% endblock %} 
-     {% block body %} 
+     {百分号 endblock 百分号} 
+     {百分号 block body 百分号} 
      <h1>Hello, World!</h1>
-     {% endblock %}
+     {百分号 endblock 百分号}
      ```
 
      
