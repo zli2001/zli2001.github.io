@@ -17,7 +17,7 @@ lightgallery: true
 
 ---
 
-基于flask的多用户博客系统Hackers学习交流平台。（Web课程设计项目）
+基于flask的多用户博客系统：Hackers学习交流平台。（Web课程设计项目）
 
 <!--more-->
 
