@@ -7,7 +7,7 @@ Hackers学习交流平台。
 
 花了10天左右的时间，断断续续地学习、改进、设计，终于完成了还不错的效果。
 
-![index](index.png)
+![index](hackers.png)
 
 详细内容不出的话意外在GitHub上见了。
 
