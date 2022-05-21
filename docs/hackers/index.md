@@ -1,7 +1,7 @@
 # Hackers学习交流平台总结
 
 
-Hackers学习交流平台。
+基于flask的多用户博客系统Hackers学习交流平台。（Web课程设计项目）
 
 <!--more-->
 
