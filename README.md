@@ -9,4 +9,4 @@
 - [x] 浏览量分析
 - [ ] Series制作
 - [ ] 自动化部署
-- [ ] lastmod
+- [x] lastmod
