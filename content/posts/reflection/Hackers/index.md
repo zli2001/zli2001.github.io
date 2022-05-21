@@ -25,7 +25,7 @@ Hackers学习交流平台。
 
 ![index](hackers.png)
 
-详细内容不出的话意外在GitHub上见了。
+详细内容在整理后会发布到GitHub。
 
 ## 项目描述
 
