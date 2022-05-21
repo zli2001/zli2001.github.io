@@ -1,21 +1,5 @@
----
-title: "Hackers学习交流平台总结"
-date: 2022-05-19T20:18:43+08:00
-lastmod: 2022-05-19T20:18:43+08:00
-draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
-description: ""
+# Hackers学习交流平台总结
 
-tags: ["Python","flask"]
-categories: ["Reflection"]
-
-
-
-featuredImagePreview: hackers.png
-lightgallery: true
-
----
 
 Hackers学习交流平台。
 
@@ -49,4 +33,5 @@ Hackers学习交流平台。
 从一开始对于书里模板、渲染这些概念懵懵懂懂，到现在已经对整个项目的设计了然于胸，经历了太多磕磕绊绊，解决了千百个莫名其妙的Bug。现在再回头看却非常感谢每一个bug，他们其实只是在努力教会我:)
 
 虽然自我感觉答辩时的问题可以回答得更好，但是老师都表扬我们啦，不要完美主义了~其实在这个过程中收获的所有，远比这门课程的成绩重要许多。况且我们已经努力做到最好了！
+
 

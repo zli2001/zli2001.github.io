@@ -26,6 +26,13 @@
     <guid>https://kliiu.github.io/learning-error_exception/</guid>
     <description><![CDATA[Comparing error and exception.]]></description>
 </item><item>
+    <title>Python中的一个*和两个**</title>
+    <link>https://kliiu.github.io/learning-args/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-args/</guid>
+    <description><![CDATA[<p>说星号可能比较陌生，但是看到*args和**kargs你一定不陌生。</p>]]></description>
+</item><item>
     <title>Java Learning</title>
     <link>https://kliiu.github.io/learning-javalearning/</link>
     <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
@@ -66,13 +73,6 @@
     <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%843-reversing-linked-list/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>02-线性结构4 Pop Sequence</title>
-    <link>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</link>
-    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
