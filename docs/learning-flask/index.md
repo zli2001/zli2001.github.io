@@ -83,13 +83,13 @@ def get_username(user_id):
 #### 重复使用代码的两种方式：宏和模板继承
 
 1. **宏**（macro）：类似python中的函数
-<div style='display: none'>
+
 定义：
 
 ```html
-{% macro render_comment(filename) -%}
+{百分号 macro render_comment(filename) 百分号}
     {{ url_for("static",filename=filename) }}
-{%- endmacro %}
+{百分号 endmacro 百分号}
 ```
 使用：
 ```html
@@ -105,7 +105,7 @@ def get_username(user_id):
     {% endfor %}
 </ul>
 ```
- </div>
+
 
 2. 模板继承：类似python中的类继承
 
