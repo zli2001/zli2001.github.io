@@ -85,6 +85,12 @@ ORDER BY order_num,item_price;
 
 ## Lesson 4 过滤数据
 
+<>：不等于
+
+!<:不小于
+
+BETWEEN 指定的两个值之间
+
 ```sql
 SELECT prod_id, prod_name, prod_price
 FROM Products

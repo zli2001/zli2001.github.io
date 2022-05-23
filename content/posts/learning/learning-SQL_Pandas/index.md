@@ -1,7 +1,7 @@
 ---
 title: "SQL and Pandas"
 date: 2022-04-25T10:09:58+08:00
-draft: false
+draft: true
 lastmod: 2022-04-25T10:09:58+08:00
 
 author: "kliiu"
