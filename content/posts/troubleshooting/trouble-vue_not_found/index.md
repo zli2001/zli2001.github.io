@@ -10,7 +10,7 @@ hiddenFromSearch: false
 tags: ["Web"]
 categories: ["消灭bug的感觉无与伦比"]
 
-featuredImagePreview: image-20220516184838876.png
+
 lightgallery: true
 
 ---

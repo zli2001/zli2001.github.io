@@ -12,7 +12,7 @@ categories: ["Reflection"]
 
 
 
-featuredImagePreview: hackers.png
+
 lightgallery: true
 
 ---
