@@ -10,7 +10,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kliiu.github.io/learning-javalearning/" /><meta property="og:image" content="https://kliiu.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-15T10:09:58+08:00" />
-<meta property="article:modified_time" content="2022-05-19T21:33:51+08:00" />
+<meta property="article:modified_time" content="2022-05-23T11:22:29+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kliiu.github.io/logo.png"/>
@@ -34,8 +34,8 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "java, code","wordcount":  4301 ,
-        "url": "https:\/\/kliiu.github.io\/learning-javalearning\/","datePublished": "2022-04-15T10:09:58+08:00","dateModified": "2022-05-19T21:33:51+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "java, code","wordcount":  5071 ,
+        "url": "https:\/\/kliiu.github.io\/learning-javalearning\/","datePublished": "2022-04-15T10:09:58+08:00","dateModified": "2022-05-23T11:22:29+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Java Learning</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4301 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;<span id="/learning-javalearning/" class="leancloud_visitors" data-flag-title="Java Learning">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;5071 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;11 minutes&nbsp;<span id="/learning-javalearning/" class="leancloud_visitors" data-flag-title="Java Learning">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -215,6 +215,21 @@
         <li><a href="#字符序列的分解">字符序列的分解</a></li>
         <li><a href="#stringtokenlizer类">StringTokenlizer类</a></li>
         <li><a href="#scanner类">Scanner类</a></li>
+        <li><a href="#输入和输出流">输入和输出流</a>
+          <ul>
+            <li><a href="#文件字节">文件字节</a></li>
+            <li><a href="#文件字符">文件字符</a></li>
+            <li><a href="#缓冲流">缓冲流</a></li>
+            <li><a href="#随机流randomaccessfile">随机流RandomAccessFile</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#java多线程机制">Java多线程机制</a>
+      <ul>
+        <li><a href="#122-java中的线程">12.2 Java中的线程</a></li>
+        <li><a href="#125-线程同步">12.5 线程同步</a></li>
+        <li><a href="#126">12.6</a></li>
       </ul>
     </li>
   </ul>
@@ -254,7 +269,54 @@
 </div>
 </div><h3 id="构造方法">构造方法</h3>
 <p>默认有一个无参数构造函数，但是如果指定了有参数的构造函数，<strong>就需要自己写一个无参数的</strong>。</p>
-<h3 id="this">this</h3>
+<p>java中的构造函数无指定默认参数功能，但可以通过方法重载实现：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span>  <span class="nc">Lader</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">double</span> <span class="n">up</span><span class="o">,</span> <span class="n">down</span><span class="o">,</span> <span class="n">height</span><span class="o">,</span> <span class="n">size</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">double</span> <span class="nf">laderSize</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//返回面积
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">size</span><span class="o">=(</span><span class="n">up</span><span class="o">+</span><span class="n">down</span><span class="o">)*</span><span class="n">height</span><span class="o">/</span><span class="n">2</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//Java支持方法重载，间接实现构造函数默认参数，
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 因此没有如C++中默认参数的功能
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Lader</span><span class="o">(</span><span class="kt">double</span> <span class="n">u</span><span class="o">,</span> <span class="kt">double</span> <span class="n">d</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">up</span><span class="o">=</span><span class="n">u</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">down</span><span class="o">=</span><span class="n">d</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Lader</span><span class="o">(</span><span class="kt">double</span> <span class="n">u</span><span class="o">,</span> <span class="kt">double</span> <span class="n">d</span><span class="o">,</span> <span class="kt">double</span> <span class="n">h</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">up</span><span class="o">=</span><span class="n">u</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">down</span><span class="o">=</span><span class="n">d</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="this">this</h3>
 <p>表示某个对象，可以出现在实例方法和构造方法中</p>
 <h3 id="局部变量">局部变量</h3>
 <ul>
@@ -1073,12 +1135,103 @@ restored.</p>
 <li>
 <p>Scanner与StringTokenlizer</p>
 </li>
-</ol></div><div class="post-footer" id="post-footer">
+</ol>
+<h3 id="输入和输出流">输入和输出流</h3>
+<p>运行可执行文件:runtime</p>
+<h4 id="文件字节">文件字节</h4>
+<ul>
+<li>
+<p>输入流FileInputStream</p>
+<p>InputStream子类</p>
+<ol>
+<li>构造方法</li>
+<li>读取字节</li>
+<li>关闭流</li>
+</ol>
+</li>
+<li>
+<p>输出流FileOutputStream</p>
+<p>OutputStream子类</p>
+</li>
+</ul>
+<h4 id="文件字符">文件字符</h4>
+<p>更好地支持Unicode</p>
+<ul>
+<li>
+<p>输入流FileReader</p>
+<p>Reader的子类</p>
+</li>
+<li>
+<p>输出流FileWriter</p>
+<p>Writer的子类</p>
+</li>
+</ul>
+<h4 id="缓冲流">缓冲流</h4>
+<p>BufferedReader和BufferedWriter</p>
+<p>FileReader无法每次读取一行。而缓冲流可以。</p>
+<ul>
+<li>
+<p>构造方法:</p>
+<p><code>BufferedReader(Reader in);</code></p>
+<p><code>BufferedWriter(Writer out);</code></p>
+</li>
+</ul>
+<h4 id="随机流randomaccessfile">随机流RandomAccessFile</h4>
+<p>构造方法：</p>
+<ol>
+<li>RandomAccessFile(String name, String mode)</li>
+<li>RandomAccessFile(File file, String mode)</li>
+</ol>
+<p>mode:r(只读),rw(读写)</p>
+<p>seek(long a)方法：</p>
+<p>定位流的读写位置，a确定距离文件开头的字节个数</p>
+<h2 id="java多线程机制">Java多线程机制</h2>
+<h3 id="122-java中的线程">12.2 Java中的线程</h3>
+<ul>
+<li>
+<p>main方法：主线程</p>
+</li>
+<li>
+<p>线程状态与生命周期 Thread类</p>
+<ol>
+<li>
+<p>新建状态NEW状态</p>
+</li>
+<li>
+<p>可运行状态：调用start方法</p>
+<p><strong>只有处于NEW状态的线程可以调用start方法</strong></p>
+</li>
+<li>
+<p>中断状态</p>
+</li>
+<li>
+<p>死亡状态</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="125-线程同步">12.5 线程同步</h3>
+<p>synchronized(同步)修饰方法。</p>
+<blockquote>
+<p>当一个线程A使用synchronized方法时，其他线程想使用这个方法就必须等待，直到A使用完。</p>
+</blockquote>
+<h3 id="126">12.6</h3>
+<p>wait()方法可以暂时中断线程的执行。</p>
+<p>如果其他线程使用同步方法不需要等待，则使用完后应用notifyAll()通知其他处于等待的线程。</p>
+<p>notify则只通知某一个线程。</p>
+<ul>
+<li>
+<p>不能在非同步方法中使用：wait(),notify(),和notifyAll();</p>
+</li>
+<li>
+<p>它们都是Object类的final方法,被所有类继承且不允许重写。</p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-05-19&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/97b475ed251712e55bc15618faf94602506dced0" target="_blank" title="commit by ‘kliiu’(klliiuuu@outlook.com) 97b475ed251712e55bc15618faf94602506dced0: add reflection">
-                                    <i class="fas fa-hashtag fa-fw"></i>97b475e</a></span>
+                <span>Updated on 2022-05-23&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/3de906d1ff01a4a986cd97f29208797d29e2239e" target="_blank" title="commit by ‘kliiu’(klliiuuu@outlook.com) 3de906d1ff01a4a986cd97f29208797d29e2239e: add notes">
+                                    <i class="fas fa-hashtag fa-fw"></i>3de906d</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>

@@ -56,13 +56,6 @@
     <guid>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</guid>
     <description><![CDATA[<p>SQL上课笔记</p>]]></description>
 </item><item>
-    <title>SQL and Pandas</title>
-    <link>https://kliiu.github.io/learning-sql_pandas/</link>
-    <pubDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://kliiu.github.io/learning-sql_pandas/</guid>
-    <description><![CDATA[<p>写pandas时的一点感悟。</p>]]></description>
-</item><item>
     <title>from .csrf import CSRFProtect, CsrfProtect SyntaxError</title>
     <link>https://kliiu.github.io/trouble-flask_wtf/</link>
     <pubDate>Sun, 24 Apr 2022 13:46:18 &#43;0800</pubDate>
@@ -76,5 +69,12 @@
     <author>Author</author>
     <guid>https://kliiu.github.io/trouble-%E8%AF%AF%E5%88%A0ubuntu%E7%9A%84python3/</guid>
     <description><![CDATA[<p>一次失败的尝试与宝贵的教训。</p>]]></description>
+</item><item>
+    <title>Error and Exception</title>
+    <link>https://kliiu.github.io/learning-error_exception/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-error_exception/</guid>
+    <description><![CDATA[Comparing error and exception.]]></description>
 </item></channel>
 </rss>

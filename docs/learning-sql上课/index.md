@@ -345,6 +345,20 @@ FROM Zia
 
 GRADE CHECK
 
+```sql
+alter table Student 
+add constraint unique_c unique (sname);
+
+alter table Student 
+add constraint check_sex check(Sex in ('男','女'));
+
+add constraint default_sex default('男') for Sex;
+
+
+```
+
+
+
 ### 实体完整性
 
 - 将行定义为特定表的唯一实体。
@@ -394,6 +408,24 @@ AS
 
 
 
+## 索引
+
+1. 聚族索引Clustered
+2. 非聚族索引Nonclustered
+3. 唯一索引Unique
 
 
+```sql
+--创建
+--若不指定，默认为nonclustered
+create clustered index StuSco_Index
+on SC(Cno ASC,Score DESC);
 
+--unique既可以是clustered也可以是nonclustered
+create unique clustered index Stuno_Index
+on Student(Sno ASC);
+
+
+--删除索引
+drop index SC.StuSco_Index
+```

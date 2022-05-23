@@ -20,7 +20,7 @@
 <meta name="application-name" content="兰州手卷">
 <meta name="apple-mobile-web-app-title" content="兰州手卷"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/" /><link rel="prev" href="https://kliiu.github.io/learning-sql_pandas/" /><link rel="next" href="https://kliiu.github.io/tidicup2022/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/" /><link rel="prev" href="https://kliiu.github.io/trouble-flask_wtf/" /><link rel="next" href="https://kliiu.github.io/tidicup2022/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -34,7 +34,7 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "code, STL","wordcount":  4163 ,
+                        }],"genre": "posts","keywords": "code, STL","wordcount":  4584 ,
         "url": "https:\/\/kliiu.github.io\/learning-sql%E4%B8%8A%E8%AF%BE\/","datePublished": "2022-04-01T19:04:06+08:00","dateModified": "2022-04-27T19:04:06+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SQL上课</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a>&nbsp;<a href="/categories/stl/"><i class="far fa-folder fa-fw"></i>STL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-01">2022-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4163 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;<span id="/learning-sql%E4%B8%8A%E8%AF%BE/" class="leancloud_visitors" data-flag-title="SQL上课">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-01">2022-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4584 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;10 minutes&nbsp;<span id="/learning-sql%E4%B8%8A%E8%AF%BE/" class="leancloud_visitors" data-flag-title="SQL上课">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -146,6 +146,7 @@
         <li><a href="#触发器">触发器</a></li>
       </ul>
     </li>
+    <li><a href="#索引">索引</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>SQL上课笔记</p>
@@ -796,7 +797,27 @@ eg: 查找某同学学号和tel</p>
 <li>强制域有效性的方法：限制类型、格式或可能值的范围。</li>
 </ul>
 <p>GRADE CHECK</p>
-<h3 id="实体完整性">实体完整性</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">Student</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">add</span><span class="w"> </span><span class="k">constraint</span><span class="w"> </span><span class="n">unique_c</span><span class="w"> </span><span class="k">unique</span><span class="w"> </span><span class="p">(</span><span class="n">sname</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">Student</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">add</span><span class="w"> </span><span class="k">constraint</span><span class="w"> </span><span class="n">check_sex</span><span class="w"> </span><span class="k">check</span><span class="p">(</span><span class="n">Sex</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="s1">&#39;女&#39;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">add</span><span class="w"> </span><span class="k">constraint</span><span class="w"> </span><span class="n">default_sex</span><span class="w"> </span><span class="k">default</span><span class="p">(</span><span class="s1">&#39;男&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Sex</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="实体完整性">实体完整性</h3>
 <ul>
 <li>
 <p>将行定义为特定表的唯一实体。</p>
@@ -875,6 +896,42 @@ eg: 查找某同学学号和tel</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">GO</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="索引">索引</h2>
+<ol>
+<li>聚族索引Clustered</li>
+<li>非聚族索引Nonclustered</li>
+<li>唯一索引Unique</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--创建
+</span></span></span><span class="line"><span class="cl"><span class="c1">--若不指定，默认为nonclustered
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="n">clustered</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">StuSco_Index</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">on</span><span class="w"> </span><span class="n">SC</span><span class="p">(</span><span class="n">Cno</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="n">Score</span><span class="w"> </span><span class="k">DESC</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--unique既可以是clustered也可以是nonclustered
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">unique</span><span class="w"> </span><span class="n">clustered</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">Stuno_Index</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">on</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="n">Sno</span><span class="w"> </span><span class="k">ASC</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--删除索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">drop</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">SC</span><span class="p">.</span><span class="n">StuSco_Index</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -900,7 +957,7 @@ eg: 查找某同学学号和tel</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/learning-sql_pandas/" class="prev" rel="prev" title="SQL and Pandas"><i class="fas fa-angle-left fa-fw"></i>SQL and Pandas</a>
+    <div class="post-nav"><a href="/trouble-flask_wtf/" class="prev" rel="prev" title="from .csrf import CSRFProtect, CsrfProtect SyntaxError"><i class="fas fa-angle-left fa-fw"></i>from .csrf import CSRFProtect, CsrfProtect SyntaxError</a>
             <a href="/tidicup2022/" class="next" rel="next" title="2022泰迪杯总结">2022泰迪杯总结<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

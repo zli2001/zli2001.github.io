@@ -33,13 +33,6 @@
     <guid>https://kliiu.github.io/tidicup2022/</guid>
     <description><![CDATA[<p>2022泰迪杯数据挖掘挑战赛C题总结</p>]]></description>
 </item><item>
-    <title>SQL and Pandas</title>
-    <link>https://kliiu.github.io/learning-sql_pandas/</link>
-    <pubDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://kliiu.github.io/learning-sql_pandas/</guid>
-    <description><![CDATA[<p>写pandas时的一点感悟。</p>]]></description>
-</item><item>
     <title>from .csrf import CSRFProtect, CsrfProtect SyntaxError</title>
     <link>https://kliiu.github.io/trouble-flask_wtf/</link>
     <pubDate>Sun, 24 Apr 2022 13:46:18 &#43;0800</pubDate>

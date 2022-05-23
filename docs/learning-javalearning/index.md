@@ -35,6 +35,31 @@ n=100;//报错，赋值只能放在方法中
 ```
 ### 构造方法
 默认有一个无参数构造函数，但是如果指定了有参数的构造函数，**就需要自己写一个无参数的**。
+
+java中的构造函数无指定默认参数功能，但可以通过方法重载实现：
+
+```java
+class  Lader{
+    private double up, down, height, size;
+        double laderSize(){
+        //返回面积
+        size=(up+down)*height/2;
+        return size;
+    }
+//Java支持方法重载，间接实现构造函数默认参数，
+// 因此没有如C++中默认参数的功能
+    Lader(double u, double d){
+        up=u;
+        down=d;
+    }
+
+    Lader(double u, double d, double h){
+        up=u;
+        down=d;
+        height=h;
+    }
+}
+```
 ### this
 表示某个对象，可以出现在实例方法和构造方法中
 ### 局部变量
@@ -580,4 +605,98 @@ class WriteAFile {
 
 
 
+### 输入和输出流
+
+运行可执行文件:runtime
+
+#### 文件字节
+
+
+
+- 输入流FileInputStream
+
+  InputStream子类
+
+  1. 构造方法
+  2. 读取字节
+  3. 关闭流
+
+- 输出流FileOutputStream
+
+  OutputStream子类
+
+#### 文件字符
+
+更好地支持Unicode
+
+- 输入流FileReader
+
+  Reader的子类
+
+- 输出流FileWriter
+
+  Writer的子类
+
+#### 缓冲流
+
+BufferedReader和BufferedWriter
+
+FileReader无法每次读取一行。而缓冲流可以。
+
+- 构造方法:
+
+  `BufferedReader(Reader in);`
+
+  `BufferedWriter(Writer out);`
+
+#### 随机流RandomAccessFile
+
+构造方法：
+
+1. RandomAccessFile(String name, String mode)
+2. RandomAccessFile(File file, String mode)
+
+mode:r(只读),rw(读写)
+
+seek(long a)方法：
+
+定位流的读写位置，a确定距离文件开头的字节个数
+
+
+
+## Java多线程机制
+
+### 12.2 Java中的线程
+
+- main方法：主线程
+
+- 线程状态与生命周期 Thread类
+
+  1. 新建状态NEW状态
+
+  2. 可运行状态：调用start方法
+
+     **只有处于NEW状态的线程可以调用start方法**
+
+  3. 中断状态
+
+  4. 死亡状态
+
+### 12.5 线程同步
+
+synchronized(同步)修饰方法。
+
+> 当一个线程A使用synchronized方法时，其他线程想使用这个方法就必须等待，直到A使用完。
+
+### 12.6
+
+wait()方法可以暂时中断线程的执行。
+
+如果其他线程使用同步方法不需要等待，则使用完后应用notifyAll()通知其他处于等待的线程。
+
+notify则只通知某一个线程。
+
+- 不能在非同步方法中使用：wait(),notify(),和notifyAll();
+
+- 它们都是Object类的final方法,被所有类继承且不允许重写。
 
