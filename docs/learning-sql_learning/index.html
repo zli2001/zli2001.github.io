@@ -34,7 +34,7 @@
                             "url": "https:\/\/kliiu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "code, STL","wordcount":  4833 ,
+                        }],"genre": "posts","keywords": "code, STL","wordcount":  5180 ,
         "url": "https:\/\/kliiu.github.io\/learning-sql_learning\/","datePublished": "2022-03-25T19:45:02+08:00","dateModified": "2022-05-23T11:22:29+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">SQL必知必会</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://kliiu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>kliiu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/coding/"><i class="far fa-folder fa-fw"></i>Coding</a>&nbsp;<a href="/categories/stl/"><i class="far fa-folder fa-fw"></i>STL</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-25">2022-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;4833 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;10 minutes&nbsp;<span id="/learning-sql_learning/" class="leancloud_visitors" data-flag-title="SQL必知必会">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-25">2022-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;5180 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;11 minutes&nbsp;<span id="/learning-sql_learning/" class="leancloud_visitors" data-flag-title="SQL必知必会">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -139,6 +139,11 @@
     <li><a href="#lesson-10-分组数据">Lesson 10 分组数据</a></li>
     <li><a href="#lesson-11-子查询">Lesson 11 子查询</a></li>
     <li><a href="#lesson-12-联结表">Lesson 12 联结表</a></li>
+    <li><a href="#lesson-13-高级联结">Lesson 13 高级联结</a>
+      <ul>
+        <li><a href="#习题">习题</a></li>
+      </ul>
+    </li>
     <li><a href="#lesson-15-插入数据">Lesson 15 插入数据</a>
       <ul>
         <li><a href="#插入一行">插入一行</a></li>
@@ -1307,7 +1312,93 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">quantity</span><span class="o">*</span><span class="n">item_price</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">1000</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="lesson-15-插入数据">Lesson 15 插入数据</h2>
+</div><h2 id="lesson-13-高级联结">Lesson 13 高级联结</h2>
+<h3 id="习题">习题</h3>
+<ol>
+<li>使用 INNER JOIN 编写 SQL语句，以检索每个顾客的名称（Customers
+表中的 cust_name）和所有的订单号（Orders 表中的 order_num）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">cust_name</span><span class="p">,</span><span class="n">order_num</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">Customers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">inner</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">cust_id</span><span class="o">=</span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>
+<p>修改刚刚创建的 SQL 语句，仅列出所有顾客，即使他们没有下过订单。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">cust_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">Customers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">left</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">cust_id</span><span class="o">=</span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用 OUTER JOIN 联结 Products 表和 OrderItems 表，返回产品名 称（prod_name）和与之相关的订单号（order_num）的列表，并按 商品名称排序。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">prod_name</span><span class="p">,</span><span class="n">order_num</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">Products</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">left</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">orderItems</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">prod_id</span><span class="o">=</span><span class="n">OrderItems</span><span class="p">.</span><span class="n">prod_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">prod_name</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>修改上一题中创建的 SQL 语句，使其返回每一项产品的总订单数 （不是订单号）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">order_num</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">orders</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">Products</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">left</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">orderItems</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">prod_id</span><span class="o">=</span><span class="n">OrderItems</span><span class="p">.</span><span class="n">prod_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">prod_id</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>编写 SQL语句，列出供应商（Vendors 表中的 vend_id）及其可供产品 的数量，包括没有产品的供应商。你需要使用 OUTER JOIN 和 COUNT() 聚合函数来计算 Products 表中每种产品的数量。注意：vend_id 列 会显示在多个表中，因此在每次引用它时都需要完全限定它</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="p">,</span><span class="k">COUNT</span><span class="p">(</span><span class="n">prod_id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">Vendors</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">left</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="o">=</span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="lesson-15-插入数据">Lesson 15 插入数据</h2>
 <h3 id="插入一行">插入一行</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

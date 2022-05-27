@@ -605,8 +605,70 @@ WHERE Customers.cust_id=Orders.cust_id
 Group BY Customers.cust_name
 HAVING SUM(quantity*item_price)>=1000;
 
+
 ```
+## Lesson 13 高级联结
+
+### 习题
+
+1. 使用 INNER JOIN 编写 SQL语句，以检索每个顾客的名称（Customers
+   表中的 cust_name）和所有的订单号（Orders 表中的 order_num）
+
+```sql
+select cust_name,order_num
+from Customers
+inner join Orders on orders.cust_id=Customers.cust_id
+```
+
+2. 修改刚刚创建的 SQL 语句，仅列出所有顾客，即使他们没有下过订单。 
+
+   ```sql
+   select cust_name
+   from Customers
+   left outer join Orders on orders.cust_id=Customers.cust_id
+   ```
+
+   
+
+3. 使用 OUTER JOIN 联结 Products 表和 OrderItems 表，返回产品名 称（prod_name）和与之相关的订单号（order_num）的列表，并按 商品名称排序。 
+
+   ```sql
+   select prod_name,order_num
+   from Products
+   left outer join orderItems on Products.prod_id=OrderItems.prod_id
+   order by prod_name
+   ```
+
+   
+
+4. 修改上一题中创建的 SQL 语句，使其返回每一项产品的总订单数 （不是订单号）。 
+
+   
+
+    ```sql
+    select count(order_num) as orders
+    from Products
+    left outer join orderItems on Products.prod_id=OrderItems.prod_id
+    group by Products.prod_id
+    ```
+
+
+
+5. 编写 SQL语句，列出供应商（Vendors 表中的 vend_id）及其可供产品 的数量，包括没有产品的供应商。你需要使用 OUTER JOIN 和 COUNT() 聚合函数来计算 Products 表中每种产品的数量。注意：vend_id 列 会显示在多个表中，因此在每次引用它时都需要完全限定它
+
+   ```sql
+   select Vendors.vend_id,COUNT(prod_id)
+   from Vendors
+   left outer join Products on Products.vend_id=Vendors.vend_id
+   group by Vendors.vend_id
+   ```
+   
+   
+
+
+
 ## Lesson 15 插入数据
+
 ### 插入一行
 ```sql
 INSERT INTO  Customers(cust_id,
