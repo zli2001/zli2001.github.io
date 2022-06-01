@@ -342,9 +342,9 @@ TO xia —-授权给用户xia
 ```
 ## 授权回收*
 ```sql
-REVOKE INSERT, UPDATE
-ON S
-FROM Zia
+REVOKE UPDATE(Sno)
+ON TABLE Student 
+FROM U4;
 ```
 ## 完整性约束
 
@@ -407,14 +407,15 @@ AS
 	DECLARE @x int
 	SELECT @x=final
 	FROM INSERTED
-	IF @x >=0 and @x<=-100
+	IF @x >=0 and @x<=100
 	BEGIN 
 		PRINT ('插入完成')
 		RETURN  
 	END
 	ELSE 
-		BEGIN PRINT('分数不在0-100的')
-		rollback --(transaction)
+		BEGIN 
+            PRINT('分数不在0-100的')
+            rollback --(transaction)
 		END
 	GO
 ```
