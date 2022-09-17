@@ -17,7 +17,7 @@ Hello World! Hello Hugo!
 
 <!--more-->
 
-### Hugo发布步骤：
+### ~~Hugo发布步骤：~~
 
 >--新建博客markdown文件，并编辑博客内容(文件名为 **.md )
 >
