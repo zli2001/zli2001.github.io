@@ -45,7 +45,7 @@ Different approaches to creating programs are called paradigms.
 ```java
 public class 三_1 {
 int m=10,n;//正确，成员变量的操作只能放在方法中，声明时可以赋初值
-n=100;//报错，赋值只能放在方法中
+n=100;//报错，赋值只能放在方法中，不能在类体
 }
 ```
 ### 构造方法
@@ -561,19 +561,19 @@ class WriteAFile {
   - 文件目录符：\\
   
 ### 正则表达式
-- [abc]:abc中任意一个
+- `[abc]`:  abc中任意一个
 
-- [^abc]:除abc外任意一个
+- `[^abc]`:除abc外任意一个
 
-- [a-zA-Z]:英文字母中的任意一个
+- `[a-zA-Z]`:英文字母中的任意一个
 
-- [a-d]:a~d任意一个
+- `[a-d]`:a~d任意一个
 
-- [a-d[m-p]]:a~d或m-p **并**
+- `[a-d[m-p]]`:a~d或m-p **并**
 
-- [a-z&&[def]]:def中任意一个 **交**
+- `[a-z&&[def]]`:def中任意一个 **交**
 
-- [a-f&&[^bc]]:adef **差**
+- `[a-f&&[^bc]]`:adef **差**
 
 - 限定修饰符：
   `String regex = "hello[2468]?";

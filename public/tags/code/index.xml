@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>code - Tag - 兰州手卷</title>
+        <link>https://kliiu.github.io/tags/code/</link>
+        <description>code - Tag - 兰州手卷</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 May 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/code/" rel="self" type="application/rss+xml" /><item>
+    <title>Flask Learning</title>
+    <link>https://kliiu.github.io/learning-flask/</link>
+    <pubDate>Sat, 21 May 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-flask/</guid>
+    <description><![CDATA[<p>Flask learning notes.</p>]]></description>
+</item><item>
+    <title>SQL上课</title>
+    <link>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</link>
+    <pubDate>Wed, 27 Apr 2022 19:04:06 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</guid>
+    <description><![CDATA[<p>SQL上课笔记</p>]]></description>
+</item><item>
+    <title>Error and Exception</title>
+    <link>https://kliiu.github.io/learning-error_exception/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-error_exception/</guid>
+    <description><![CDATA[Comparing error and exception.]]></description>
+</item><item>
+    <title>Python中的一个*和两个**</title>
+    <link>https://kliiu.github.io/learning-args/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-args/</guid>
+    <description><![CDATA[<p>说星号可能比较陌生，但是看到*args和**kargs你一定不陌生。</p>]]></description>
+</item><item>
+    <title>Java Learning</title>
+    <link>https://kliiu.github.io/learning-javalearning/</link>
+    <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-javalearning/</guid>
+    <description><![CDATA[<p>Java learning notes.</p>]]></description>
+</item><item>
+    <title>SQL必知必会</title>
+    <link>https://kliiu.github.io/learning-sql_learning/</link>
+    <pubDate>Fri, 25 Mar 2022 19:45:02 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-sql_learning/</guid>
+    <description><![CDATA[Notes and answers of 《STL必知必会》]]></description>
+</item><item>
+    <title>03-树1 树的同构</title>
+    <link>https://kliiu.github.io/algorithm-03-%E6%A0%911-%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84/</link>
+    <pubDate>Wed, 01 Sep 2021 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/algorithm-03-%E6%A0%911-%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>02-线性结构3 Reversing Linked List</title>
+    <link>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%843-reversing-linked-list/</link>
+    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%843-reversing-linked-list/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>02-线性结构4 Pop Sequence</title>
+    <link>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</link>
+    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>2019蓝桥杯C&#43;&#43;B 二叉树的权值</title>
+    <link>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</link>
+    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

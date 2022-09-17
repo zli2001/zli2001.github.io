@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Configuration - Category - 兰州手卷</title>
+        <link>https://kliiu.github.io/categories/configuration/</link>
+        <description>Configuration - Category - 兰州手卷</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/configuration/" rel="self" type="application/rss+xml" /><item>
+    <title>Debug Configuration如何配置（已有项目）</title>
+    <link>https://kliiu.github.io/conf-cliondebug/</link>
+    <pubDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/conf-cliondebug/</guid>
+    <description><![CDATA[<p>【CLion】Debug Configuration如何配置（已有项目）</p>]]></description>
+</item><item>
+    <title>安装Pytorch&#43;cuda10.2&#43;cudnn（笔记本集显&#43;独显）踩坑</title>
+    <link>https://kliiu.github.io/conf-pytorchcuda/</link>
+    <pubDate>Fri, 09 Jul 2021 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/conf-pytorchcuda/</guid>
+    <description><![CDATA[<p>安装Pytorch+cuda10.2+cudnn（笔记本集显+独显）踩坑</p>]]></description>
+</item></channel>
+</rss>

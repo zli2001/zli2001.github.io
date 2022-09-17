@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>java - Tag - 兰州手卷</title>
+        <link>https://kliiu.github.io/tags/java/</link>
+        <description>java - Tag - 兰州手卷</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Error and Exception</title>
+    <link>https://kliiu.github.io/learning-error_exception/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-error_exception/</guid>
+    <description><![CDATA[Comparing error and exception.]]></description>
+</item><item>
+    <title>Python中的一个*和两个**</title>
+    <link>https://kliiu.github.io/learning-args/</link>
+    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-args/</guid>
+    <description><![CDATA[<p>说星号可能比较陌生，但是看到*args和**kargs你一定不陌生。</p>]]></description>
+</item><item>
+    <title>Java Learning</title>
+    <link>https://kliiu.github.io/learning-javalearning/</link>
+    <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://kliiu.github.io/learning-javalearning/</guid>
+    <description><![CDATA[<p>Java learning notes.</p>]]></description>
+</item></channel>
+</rss>
