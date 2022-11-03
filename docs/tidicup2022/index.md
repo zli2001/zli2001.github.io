@@ -42,7 +42,7 @@
      `task1_ans.to_csv('testresult1.csv',index=False,encoding='utf_8_sig')`
    
 2. 了解了有趣的PageRank算法
-3. 了解到了HanLP这个十分强大的开源自然语言处理工具，后续可以做一些文档翻译的贡献。
+3. 了解并使用HanLP这个十分强大的开源自然语言处理工具。
    
      
 
