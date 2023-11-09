@@ -7,7 +7,7 @@ defaultContentLanguage = "en"
 theme = "LoveIt"
 # themes directory
 # 主题目录
-themesDir = "/themes"
+#themesDir = "/themes"
 ignoreErrors = ["error-remote-getjson"]
 
 # website title
