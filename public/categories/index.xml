@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - 兰州手卷</title>
+        <title>Categories - Category - kliiu</title>
         <link>https://kliiu.github.io/categories/</link>
-        <description>Categories - Category - 兰州手卷</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 17 Sep 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+        <description>Categories - Category - kliiu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
+            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 17 Sep 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Reading</title>
     <link>https://kliiu.github.io/categories/reading/</link>
     <pubDate>Sat, 17 Sep 2022 10:09:58 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/reading/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -16,7 +16,7 @@
     <title>Coding</title>
     <link>https://kliiu.github.io/categories/coding/</link>
     <pubDate>Sat, 21 May 2022 10:09:58 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/coding/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -24,15 +24,15 @@
     <title>Reflection</title>
     <link>https://kliiu.github.io/categories/reflection/</link>
     <pubDate>Thu, 19 May 2022 20:18:43 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/reflection/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>消灭bug的感觉无与伦比</title>
+    <title>消灭bug</title>
     <link>https://kliiu.github.io/categories/%E6%B6%88%E7%81%ADbug%E7%9A%84%E6%84%9F%E8%A7%89%E6%97%A0%E4%B8%8E%E4%BC%A6%E6%AF%94/</link>
     <pubDate>Mon, 16 May 2022 20:09:58 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/%E6%B6%88%E7%81%ADbug%E7%9A%84%E6%84%9F%E8%A7%89%E6%97%A0%E4%B8%8E%E4%BC%A6%E6%AF%94/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -40,7 +40,7 @@
     <title>STL</title>
     <link>https://kliiu.github.io/categories/stl/</link>
     <pubDate>Wed, 27 Apr 2022 19:04:06 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/stl/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -48,7 +48,7 @@
     <title>Blog</title>
     <link>https://kliiu.github.io/categories/blog/</link>
     <pubDate>Sun, 17 Apr 2022 11:21:46 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/blog/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -56,7 +56,7 @@
     <title>Configuration</title>
     <link>https://kliiu.github.io/categories/configuration/</link>
     <pubDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/configuration/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -64,7 +64,7 @@
     <title>Algorithm</title>
     <link>https://kliiu.github.io/categories/algorithm/</link>
     <pubDate>Wed, 01 Sep 2021 10:09:58 &#43;0800</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/algorithm/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -72,7 +72,7 @@
     <title>Documentation</title>
     <link>https://kliiu.github.io/categories/documentation/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>兰州手卷</author>
+    <author>kliiu</author>
     <guid>https://kliiu.github.io/categories/documentation/</guid>
     <description><![CDATA[]]></description>
 </item>

@@ -9,7 +9,7 @@ author: "kliiu"
 authorLink: "https://kliiu.github.io"
 
 tags: ["flask","python"]
-categories: ["消灭bug的感觉无与伦比"]
+categories: ["消灭bug"]
 
 lightgallery: true
 ---
