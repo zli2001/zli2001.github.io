@@ -13,10 +13,5 @@ math:
 
 
 
-
-
-## About Me
-A Chinese girl who is pursuing an undergraduate degree in Computer Science.
-
 ## About Blog
 Leave a comment to ask me about anything.
