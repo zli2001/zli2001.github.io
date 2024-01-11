@@ -53,36 +53,12 @@
     <description><![CDATA[Notes and answers of 《STL必知必会》]]></description>
 </item>
 <item>
-    <title>03-树1 树的同构</title>
-    <link>https://kliiu.github.io/algorithm-03-%E6%A0%911-%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84/</link>
-    <pubDate>Wed, 01 Sep 2021 10:09:58 &#43;0800</pubDate>
+    <title>Python Learning Notes</title>
+    <link>https://kliiu.github.io/learning-pythonnotes/</link>
+    <pubDate>Fri, 28 May 2021 10:09:58 &#43;0800</pubDate>
     <author>kliiu</author>
-    <guid>https://kliiu.github.io/algorithm-03-%E6%A0%911-%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>02-线性结构3 Reversing Linked List</title>
-    <link>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%843-reversing-linked-list/</link>
-    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%843-reversing-linked-list/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>02-线性结构4 Pop Sequence</title>
-    <link>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</link>
-    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/algorithm-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%844-pop-sequence/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>2019蓝桥杯C&#43;&#43;B 二叉树的权值</title>
-    <link>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</link>
-    <pubDate>Mon, 16 Aug 2021 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/algorithm-2019%E8%93%9D%E6%A1%A5%E6%9D%AFc-b-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9D%83%E5%80%BC/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://kliiu.github.io/learning-pythonnotes/</guid>
+    <description><![CDATA[<p>Python learning notes</p>]]></description>
 </item>
 </channel>
 </rss>

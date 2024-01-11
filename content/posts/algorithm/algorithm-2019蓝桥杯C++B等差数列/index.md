@@ -4,7 +4,7 @@
 
 title: "2019蓝桥杯C++B等差数列"
 date: 2021-08-16T10:09:58+08:00
-draft: false
+draft: true
 lastmod: 2021-08-16T10:09:58+08:00
 
 author: "kliiu"

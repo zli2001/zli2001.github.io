@@ -53,6 +53,14 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Monthly</title>
+    <link>https://kliiu.github.io/tags/monthly/</link>
+    <pubDate>Wed, 04 May 2022 10:09:58 &#43;0800</pubDate>
+    <author>kliiu</author>
+    <guid>https://kliiu.github.io/tags/monthly/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>data</title>
     <link>https://kliiu.github.io/tags/data/</link>
     <pubDate>Sun, 01 May 2022 12:18:43 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Sat, 23 Apr 2022 10:09:58 &#43;0800</pubDate>
     <author>kliiu</author>
     <guid>https://kliiu.github.io/tags/ubuntu/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>java</title>
-    <link>https://kliiu.github.io/tags/java/</link>
-    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/tags/java/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

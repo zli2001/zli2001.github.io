@@ -4,7 +4,7 @@
 
 title: "03-树1 树的同构"
 date: 2021-09-01T10:09:58+08:00
-draft: false
+draft: true
 lastmod: 2021-09-01T10:09:58+08:00
 
 author: "kliiu"

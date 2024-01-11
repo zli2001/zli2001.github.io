@@ -3,7 +3,7 @@
 
 title: "02-线性结构2 一元多项式的乘法与加法运算"
 date: 2021-08-10T10:09:58+08:00
-draft: false
+draft: true
 lastmod: 2021-08-10T10:09:58+08:00
 
 author: "kliiu"

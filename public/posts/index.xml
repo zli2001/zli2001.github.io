@@ -37,6 +37,14 @@
     <description><![CDATA[<p>Vue.js文件找不到，导致页面显示不全。</p>]]></description>
 </item>
 <item>
+    <title>2022四月总结</title>
+    <link>https://kliiu.github.io/202204/</link>
+    <pubDate>Wed, 04 May 2022 10:09:58 &#43;0800</pubDate>
+    <author>kliiu</author>
+    <guid>https://kliiu.github.io/202204/</guid>
+    <description><![CDATA[<p>四月总结。</p>]]></description>
+</item>
+<item>
     <title>2022泰迪杯数据挖掘挑战赛C题思路</title>
     <link>https://kliiu.github.io/tidicupsolution/</link>
     <pubDate>Sun, 01 May 2022 12:18:43 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>kliiu</author>
     <guid>https://kliiu.github.io/trouble-%E8%AF%AF%E5%88%A0ubuntu%E7%9A%84python3/</guid>
     <description><![CDATA[<p>一次失败的尝试与宝贵的教训。</p>]]></description>
-</item>
-<item>
-    <title>Error and Exception</title>
-    <link>https://kliiu.github.io/learning-error_exception/</link>
-    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-error_exception/</guid>
-    <description><![CDATA[Comparing error and exception.]]></description>
 </item>
 </channel>
 </rss>
