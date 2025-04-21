@@ -3,8 +3,8 @@ title: "《被讨厌的勇气》书摘"
 date: 2022-09-17T10:09:58+08:00
 lastmod: 2022-09-17T10:09:58+08:00
 draft: true
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: "Flask learning notes."
 hiddenFromSearch: false
 

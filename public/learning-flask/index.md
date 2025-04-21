@@ -16,7 +16,7 @@ Flask learning notes.
 20220422
 换成Windows了
 
-Linux,  python, [我知道你们的厉害了](https://kliiu.github.io/trouble-误删ubuntu的python3/).
+Linux,  python, [我知道你们的厉害了](https://zli2001.github.io/trouble-误删ubuntu的python3/).
 
 
 

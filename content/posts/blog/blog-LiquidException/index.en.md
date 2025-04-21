@@ -4,8 +4,8 @@ date: 2022-04-16T16:59:59+08:00
 lastmod: 2022-04-16T16:59:59+08:00
 
 draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: "Trouble shooting of deploying github pages"
 
 tags: ["hugo"]

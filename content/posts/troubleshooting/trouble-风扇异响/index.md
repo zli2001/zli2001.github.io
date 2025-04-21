@@ -5,8 +5,8 @@ draft: true
 
 lastmod: 2022-04-14T13:46:18+08:00
 draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 
 tags: ["hardware"]
 categories: ["消灭bug"]

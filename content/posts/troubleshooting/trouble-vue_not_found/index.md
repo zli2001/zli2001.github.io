@@ -2,10 +2,9 @@
 title: "Vue.js文件找不到，导致页面显示不全"
 date: 2022-05-16T20:09:58+08:00
 draft: false
-lastmod: 2022-05-16T2009:58+08:00
 
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 hiddenFromSearch: false
 tags: ["Web"]
 categories: ["消灭bug"]

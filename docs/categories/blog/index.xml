@@ -1,40 +1,41 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Blog - Category - kliiu</title>
-        <link>https://kliiu.github.io/categories/blog/</link>
-        <description>Blog - Category - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 17 Apr 2022 11:21:46 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/categories/blog/" rel="self" type="application/rss+xml" /><item>
-    <title>How to show pictures in hugo blog</title>
-    <link>https://kliiu.github.io/blog-showpicture/</link>
-    <pubDate>Sun, 17 Apr 2022 11:21:46 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/blog-showpicture/</guid>
-    <description><![CDATA[<p>If you can see your pictures in md file but not on hugo site, this is what you should do.</p>]]></description>
-</item>
-<item>
-    <title>Blog LiquidException</title>
-    <link>https://kliiu.github.io/blog-liquidexception/</link>
-    <pubDate>Sat, 16 Apr 2022 16:59:59 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/blog-liquidexception/</guid>
-    <description><![CDATA[<p>Solving the deploying problem.</p>]]></description>
-</item>
-<item>
-    <title>Hello Hugo</title>
-    <link>https://kliiu.github.io/blog-my-first-post/</link>
-    <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/blog-my-first-post/</guid>
-    <description><![CDATA[<p>Hello World! Hello Hugo!</p>]]></description>
-</item>
-<item>
-    <title>ReadMore</title>
-    <link>https://kliiu.github.io/blog-readmore/</link>
-    <pubDate>Sun, 20 Mar 2022 16:02:47 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/blog-readmore/</guid>
-    <description><![CDATA[<p>如何只显示部分内容，隐藏博客其他内容?</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on zli2001</title>
+    <link>https://zli2001.github.io/categories/blog/</link>
+    <description>Recent content in Blog on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 17 Sep 2022 21:57:33 +0800</lastBuildDate>
+    <atom:link href="https://zli2001.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to show pictures in hugo blog</title>
+      <link>https://zli2001.github.io/blog-showpicture/</link>
+      <pubDate>Sun, 17 Apr 2022 11:21:46 +0800</pubDate>
+      <guid>https://zli2001.github.io/blog-showpicture/</guid>
+      <description>&lt;p&gt;If you can see your pictures in md file but not on hugo site, this is what you should do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog LiquidException</title>
+      <link>https://zli2001.github.io/blog-liquidexception/</link>
+      <pubDate>Sat, 16 Apr 2022 16:59:59 +0800</pubDate>
+      <guid>https://zli2001.github.io/blog-liquidexception/</guid>
+      <description>&lt;p&gt;Solving the deploying problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello Hugo</title>
+      <link>https://zli2001.github.io/blog-my-first-post/</link>
+      <pubDate>Sat, 19 Mar 2022 15:06:09 +0800</pubDate>
+      <guid>https://zli2001.github.io/blog-my-first-post/</guid>
+      <description>&lt;p&gt;Hello World! Hello Hugo!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ReadMore</title>
+      <link>https://zli2001.github.io/blog-readmore/</link>
+      <pubDate>Sun, 20 Mar 2022 16:02:47 +0800</pubDate>
+      <guid>https://zli2001.github.io/blog-readmore/</guid>
+      <description>&lt;p&gt;如何只显示部分内容，隐藏博客其他内容?&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

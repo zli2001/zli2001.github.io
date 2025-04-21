@@ -5,8 +5,8 @@ date: 2022-04-21T10:09:58+08:00
 draft: false
 lastmod: 2022-05-21T10:09:58+08:00
 
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: "Flask learning notes."
 hiddenFromSearch: false
 tags: ["Python","code","flask"]
@@ -31,7 +31,7 @@ Flask learning notes.
 20220422
 换成Windows了
 
-Linux,  python, [我知道你们的厉害了](https://kliiu.github.io/trouble-误删ubuntu的python3/).
+Linux,  python, [我知道你们的厉害了](https://zli2001.github.io/trouble-误删ubuntu的python3/).
 
 
 

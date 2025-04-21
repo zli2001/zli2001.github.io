@@ -4,8 +4,8 @@ subtitle: ""
 date: 2022-05-01T12:18:43+08:00
 lastmod: 2022-05-01T12:18:43+08:00
 draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: ""
 
 tags: ["Python","data"]
@@ -39,7 +39,7 @@ resources:
    - 分析疫情前后旅游产品的变化
    - 写一封信提出政策建议
 
-**以下解答的代码见我的[Github](https://github.com/kliiu/2022TipDMCup)**
+**以下解答的代码见我的[Github](https://github.com/zli2001/2022TipDMCup)**
 ##  第一题
 
 

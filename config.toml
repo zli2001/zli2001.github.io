@@ -1,4 +1,4 @@
-baseURL = "https://kliiu.github.io"
+baseURL = "https://zli2001.github.io"
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
 defaultContentLanguage = "en"
@@ -12,8 +12,7 @@ ignoreErrors = ["error-remote-getjson"]
 
 # website title
 # 网站标题
-title = "kliiu"
-
+title = "zli2001"
 # whether to use robots.txt
 # 是否使用 robots.txt
 enableRobotsTXT = true
@@ -39,7 +38,7 @@ enableEmoji = true
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = true
     # default amount of posts in each pages
-    paginate = 12
+    pagination.paperSize = 10
     # [UA-XXXXXXXX-X] google analytics code
     googleAnalytics = ""
     # copyright description used only for seo schema
@@ -94,7 +93,7 @@ enableEmoji = true
         pre = "<i class='fab fa-github fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/kliiu/kliiu.github.io"
+        url = "https://github.com/zli2001/zli2001.github.io"
         title = "GitHub"
         weight = 6
     [languages.en.params]
@@ -105,7 +104,7 @@ enableEmoji = true
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
-        title = "kliiu"
+        title = "zli2001"
         # whether to omit favicon resource links
         noFavicon = false
         # modern SVG favicon to use in place of older style .png and .ico files
@@ -163,10 +162,10 @@ enableEmoji = true
         [languages.en.params.home.posts]
           enable = true
           # special amount of posts in each home posts page
-          paginate = 6
+          pagination.pagerSize = 6
       # Social config in home page
       [languages.en.params.social]
-        GitHub = "kliiu"
+        GitHub = "zli2001"
         #Linkedin = ""
         #Twitter = "xxxx"
         #Instagram = ""
@@ -238,6 +237,8 @@ enableEmoji = true
 [params]
   # LoveIt theme version
   # LoveIt 主题版本
+  [params.author]
+    name = 'zli2001'
   version = "0.2.X"
   # site default theme ("light", "dark", "auto")
   # 网站默认主题 ("light", "dark", "auto")
@@ -277,7 +278,7 @@ enableEmoji = true
       logo = ""
       # title name
       # 标题名称
-      name = "kliiu"
+      name = "zli2001"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       #pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
@@ -321,7 +322,7 @@ enableEmoji = true
   [params.section]
     # special amount of posts in each section page
     # section 页面每页显示文章数量
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     # 日期格式 (月和日)
     dateFormat = "01-02"
@@ -334,7 +335,7 @@ enableEmoji = true
   [params.list]
     # special amount of posts in each list page
     # list 页面每页显示文章数量
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     # 日期格式 (月和日)
     dateFormat = "01-02"
@@ -572,7 +573,8 @@ enableEmoji = true
         logoUrl = "/images/avatar.png"
 
   # TypeIt config
-  # TypeIt 配置
+  # TypeIt 配置[params]
+
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
     # 每一步的打字速度 (单位是毫秒)
@@ -693,12 +695,7 @@ enableEmoji = true
     startLevel = 2
     endLevel = 6
 
-# Author config
-# 作者配置
-[author]
-  name = "kliiu"
-  email = "kkli19@outlook.com"
-  link = "https://kliiu.github.io/about"
+
 
 # Sitemap config
 # 网站地图配置

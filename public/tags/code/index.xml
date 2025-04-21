@@ -1,64 +1,62 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>code - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/code/</link>
-        <description>code - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 May 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/code/" rel="self" type="application/rss+xml" /><item>
-    <title>Flask Learning</title>
-    <link>https://kliiu.github.io/learning-flask/</link>
-    <pubDate>Sat, 21 May 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-flask/</guid>
-    <description><![CDATA[<p>Flask learning notes.</p>]]></description>
-</item>
-<item>
-    <title>SQL上课</title>
-    <link>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</link>
-    <pubDate>Wed, 27 Apr 2022 19:04:06 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-sql%E4%B8%8A%E8%AF%BE/</guid>
-    <description><![CDATA[<p>SQL上课笔记</p>]]></description>
-</item>
-<item>
-    <title>Error and Exception</title>
-    <link>https://kliiu.github.io/learning-error_exception/</link>
-    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-error_exception/</guid>
-    <description><![CDATA[Comparing error and exception.]]></description>
-</item>
-<item>
-    <title>Python中的一个*和两个**</title>
-    <link>https://kliiu.github.io/learning-args/</link>
-    <pubDate>Mon, 18 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-args/</guid>
-    <description><![CDATA[<p>说星号可能比较陌生，但是看到*args和**kargs你一定不陌生。</p>]]></description>
-</item>
-<item>
-    <title>Java Learning</title>
-    <link>https://kliiu.github.io/learning-javalearning/</link>
-    <pubDate>Fri, 15 Apr 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-javalearning/</guid>
-    <description><![CDATA[<p>Java learning notes.</p>]]></description>
-</item>
-<item>
-    <title>SQL必知必会</title>
-    <link>https://kliiu.github.io/learning-sql_learning/</link>
-    <pubDate>Fri, 25 Mar 2022 19:45:02 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-sql_learning/</guid>
-    <description><![CDATA[Notes and answers of 《STL必知必会》]]></description>
-</item>
-<item>
-    <title>Python Learning Notes</title>
-    <link>https://kliiu.github.io/learning-pythonnotes/</link>
-    <pubDate>Fri, 28 May 2021 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-pythonnotes/</guid>
-    <description><![CDATA[<p>Python learning notes</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on zli2001</title>
+    <link>http://localhost:1313/tags/code/</link>
+    <description>Recent content in Code on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 17 Sep 2022 21:57:33 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask Learning</title>
+      <link>http://localhost:1313/learning-flask/</link>
+      <pubDate>Thu, 21 Apr 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/learning-flask/</guid>
+      <description>&lt;p&gt;Flask learning notes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL上课</title>
+      <link>http://localhost:1313/learning-sql%E4%B8%8A%E8%AF%BE/</link>
+      <pubDate>Fri, 01 Apr 2022 19:04:06 +0800</pubDate>
+      <guid>http://localhost:1313/learning-sql%E4%B8%8A%E8%AF%BE/</guid>
+      <description>&lt;p&gt;SQL上课笔记&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Error and Exception</title>
+      <link>http://localhost:1313/learning-error_exception/</link>
+      <pubDate>Mon, 18 Apr 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/learning-error_exception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python中的一个*和两个**</title>
+      <link>http://localhost:1313/learning-args/</link>
+      <pubDate>Mon, 18 Apr 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/learning-args/</guid>
+      <description>&lt;p&gt;说星号可能比较陌生，但是看到*args和**kargs你一定不陌生。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Learning</title>
+      <link>http://localhost:1313/learning-javalearning/</link>
+      <pubDate>Fri, 15 Apr 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/learning-javalearning/</guid>
+      <description>&lt;p&gt;Java learning notes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL必知必会</title>
+      <link>http://localhost:1313/learning-sql_learning/</link>
+      <pubDate>Fri, 25 Mar 2022 19:45:02 +0800</pubDate>
+      <guid>http://localhost:1313/learning-sql_learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Learning Notes</title>
+      <link>http://localhost:1313/learning-pythonnotes/</link>
+      <pubDate>Thu, 28 May 2020 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/learning-pythonnotes/</guid>
+      <description>&lt;p&gt;Python learning notes&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

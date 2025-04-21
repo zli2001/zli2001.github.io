@@ -5,8 +5,8 @@ date: 2022-04-18T10:09:58+08:00
 draft: false
 lastmod: 2022-04-18T10:09:58+08:00
 
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 hiddenFromSearch: false
 tags: ["java","code"]
 categories: ["Coding"]

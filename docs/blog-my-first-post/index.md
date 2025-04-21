@@ -12,7 +12,7 @@ Hello World! Hello Hugo!
 > 
 > ---生成静态页面
 > 
-> ```hugo --theme=dusky-neon-potato  --buildDrafts --baseUrl="https://kliiu.github.io/"```
+> ```hugo --theme=dusky-neon-potato  --buildDrafts --baseUrl="https://zli2001.github.io/"```
 > 
 > ---发布
 > 

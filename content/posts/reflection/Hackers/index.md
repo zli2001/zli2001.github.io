@@ -3,8 +3,8 @@ title: "Hackers学习交流平台总结"
 date: 2022-05-19T20:18:43+08:00
 lastmod: 2022-05-19T20:18:43+08:00
 draft: True
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: ""
 
 tags: ["Python","flask"]

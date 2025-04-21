@@ -1,16 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Web - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/web/</link>
-        <description>Web - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 16 May 2022 20:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
-    <title>Vue.js文件找不到，导致页面显示不全</title>
-    <link>https://kliiu.github.io/trouble-vue_not_found/</link>
-    <pubDate>Mon, 16 May 2022 20:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/trouble-vue_not_found/</guid>
-    <description><![CDATA[<p>Vue.js文件找不到，导致页面显示不全。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on zli2001</title>
+    <link>https://zli2001.github.io/tags/web/</link>
+    <description>Recent content in Web on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 11 Nov 2023 22:53:32 -0600</lastBuildDate>
+    <atom:link href="https://zli2001.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue.js文件找不到，导致页面显示不全</title>
+      <link>https://zli2001.github.io/trouble-vue_not_found/</link>
+      <pubDate>Mon, 16 May 2022 20:09:58 +0800</pubDate>
+      <guid>https://zli2001.github.io/trouble-vue_not_found/</guid>
+      <description>&lt;p&gt;Vue.js文件找不到，导致页面显示不全。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

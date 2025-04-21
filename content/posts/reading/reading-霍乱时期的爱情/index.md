@@ -6,8 +6,8 @@ draft: true
 
 lastmod: 2022-03-23T15:08:36+08:00
 draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 
 
 tags: ["book","thoughts"]

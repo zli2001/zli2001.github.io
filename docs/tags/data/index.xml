@@ -1,24 +1,27 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>data - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/data/</link>
-        <description>data - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 May 2022 12:18:43 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/data/" rel="self" type="application/rss+xml" /><item>
-    <title>2022泰迪杯数据挖掘挑战赛C题思路</title>
-    <link>https://kliiu.github.io/tidicupsolution/</link>
-    <pubDate>Sun, 01 May 2022 12:18:43 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/tidicupsolution/</guid>
-    <description><![CDATA[<p>2022泰迪杯数据挖掘挑战赛C题思路。</p>]]></description>
-</item>
-<item>
-    <title>2022泰迪杯总结</title>
-    <link>https://kliiu.github.io/tidicup2022/</link>
-    <pubDate>Sat, 30 Apr 2022 22:18:43 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/tidicup2022/</guid>
-    <description><![CDATA[<p>2022泰迪杯数据挖掘挑战赛C题总结</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on zli2001</title>
+    <link>https://zli2001.github.io/tags/data/</link>
+    <description>Recent content in Data on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 03 Nov 2022 22:34:24 +0800</lastBuildDate>
+    <atom:link href="https://zli2001.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022泰迪杯数据挖掘挑战赛C题思路</title>
+      <link>https://zli2001.github.io/tidicupsolution/</link>
+      <pubDate>Sun, 01 May 2022 12:18:43 +0800</pubDate>
+      <guid>https://zli2001.github.io/tidicupsolution/</guid>
+      <description>&lt;p&gt;2022泰迪杯数据挖掘挑战赛C题思路。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2022泰迪杯总结</title>
+      <link>https://zli2001.github.io/tidicup2022/</link>
+      <pubDate>Sat, 30 Apr 2022 22:18:43 +0800</pubDate>
+      <guid>https://zli2001.github.io/tidicup2022/</guid>
+      <description>&lt;p&gt;2022泰迪杯数据挖掘挑战赛C题总结&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

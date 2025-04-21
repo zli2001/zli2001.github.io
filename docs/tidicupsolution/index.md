@@ -22,7 +22,7 @@
    - 分析疫情前后旅游产品的变化
    - 写一封信提出政策建议
 
-**以下解答的代码见我的[Github](https://github.com/kliiu/2022TipDMCup)**
+**以下解答的代码见我的[Github](https://github.com/zli2001/2022TipDMCup)**
 ##  第一题
 
 

@@ -1,24 +1,27 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>config - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/config/</link>
-        <description>config - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/config/" rel="self" type="application/rss+xml" /><item>
-    <title>Debug Configuration如何配置（已有项目）</title>
-    <link>https://kliiu.github.io/conf-cliondebug/</link>
-    <pubDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/conf-cliondebug/</guid>
-    <description><![CDATA[<p>【CLion】Debug Configuration如何配置（已有项目）</p>]]></description>
-</item>
-<item>
-    <title>安装Pytorch&#43;cuda10.2&#43;cudnn（笔记本集显&#43;独显）踩坑</title>
-    <link>https://kliiu.github.io/conf-pytorchcuda/</link>
-    <pubDate>Fri, 09 Jul 2021 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/conf-pytorchcuda/</guid>
-    <description><![CDATA[<p>安装Pytorch+cuda10.2+cudnn（笔记本集显+独显）踩坑</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Config on zli2001</title>
+    <link>http://localhost:1313/tags/config/</link>
+    <description>Recent content in Config on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 06 May 2022 14:10:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debug Configuration如何配置（已有项目）</title>
+      <link>http://localhost:1313/conf-cliondebug/</link>
+      <pubDate>Mon, 28 Feb 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/conf-cliondebug/</guid>
+      <description>&lt;p&gt;【CLion】Debug Configuration如何配置（已有项目）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>安装Pytorch&#43;cuda10.2&#43;cudnn（笔记本集显&#43;独显）踩坑</title>
+      <link>http://localhost:1313/conf-pytorchcuda/</link>
+      <pubDate>Fri, 09 Jul 2021 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/conf-pytorchcuda/</guid>
+      <description>&lt;p&gt;安装Pytorch+cuda10.2+cudnn（笔记本集显+独显）踩坑&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

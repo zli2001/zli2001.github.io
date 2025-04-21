@@ -1,24 +1,27 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>flask - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/flask/</link>
-        <description>flask - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 21 May 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/flask/" rel="self" type="application/rss+xml" /><item>
-    <title>Flask Learning</title>
-    <link>https://kliiu.github.io/learning-flask/</link>
-    <pubDate>Sat, 21 May 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/learning-flask/</guid>
-    <description><![CDATA[<p>Flask learning notes.</p>]]></description>
-</item>
-<item>
-    <title>from .csrf import CSRFProtect, CsrfProtect SyntaxError</title>
-    <link>https://kliiu.github.io/trouble-flask_wtf/</link>
-    <pubDate>Sun, 24 Apr 2022 13:46:18 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/trouble-flask_wtf/</guid>
-    <description><![CDATA[<p>《Flask+Web开发》这本书的4.4在视图函数中处理表单程序引入flask_wtf报错</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flask on zli2001</title>
+    <link>https://zli2001.github.io/tags/flask/</link>
+    <description>Recent content in Flask on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 11 Nov 2023 22:53:32 -0600</lastBuildDate>
+    <atom:link href="https://zli2001.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask Learning</title>
+      <link>https://zli2001.github.io/learning-flask/</link>
+      <pubDate>Thu, 21 Apr 2022 10:09:58 +0800</pubDate>
+      <guid>https://zli2001.github.io/learning-flask/</guid>
+      <description>&lt;p&gt;Flask learning notes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>from .csrf import CSRFProtect, CsrfProtect SyntaxError</title>
+      <link>https://zli2001.github.io/trouble-flask_wtf/</link>
+      <pubDate>Sun, 24 Apr 2022 13:46:18 +0800</pubDate>
+      <guid>https://zli2001.github.io/trouble-flask_wtf/</guid>
+      <description>&lt;p&gt;《Flask+Web开发》这本书的4.4在视图函数中处理表单程序引入flask_wtf报错&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

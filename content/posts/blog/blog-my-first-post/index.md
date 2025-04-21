@@ -5,8 +5,8 @@ draft: false
 
 lastmod: 2022-04-15T10:09:58+08:00
 draft: false
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 description: "My first blog"
 tags: ["hugo"]
 categories: ["Blog"]
@@ -25,7 +25,7 @@ Hello World! Hello Hugo!
 > 
 > ---生成静态页面
 > 
-> ```hugo --theme=dusky-neon-potato  --buildDrafts --baseUrl="https://kliiu.github.io/"```
+> ```hugo --theme=dusky-neon-potato  --buildDrafts --baseUrl="https://zli2001.github.io/"```
 > 
 > ---发布
 > 

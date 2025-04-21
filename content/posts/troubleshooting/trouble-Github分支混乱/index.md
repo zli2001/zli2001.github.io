@@ -5,8 +5,8 @@ date: 2021-08-16T10:09:58+08:00
 draft: false
 lastmod: 2021-08-16T10:09:58+08:00
 
-author: "kliiu"
-authorLink: "https://kliiu.github.io"
+author: "zli2001"
+authorLink: "https://zli2001.github.io"
 hiddenFromSearch: false
 tags: ["GitHub"]
 categories: ["消灭bug"]

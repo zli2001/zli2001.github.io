@@ -1,16 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>CLion - Tag - kliiu</title>
-        <link>https://kliiu.github.io/tags/clion/</link>
-        <description>CLion - Tag - kliiu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kkli19@outlook.com (kliiu)</managingEditor>
-            <webMaster>kkli19@outlook.com (kliiu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/clion/" rel="self" type="application/rss+xml" /><item>
-    <title>Debug Configuration如何配置（已有项目）</title>
-    <link>https://kliiu.github.io/conf-cliondebug/</link>
-    <pubDate>Mon, 28 Feb 2022 10:09:58 &#43;0800</pubDate>
-    <author>kliiu</author>
-    <guid>https://kliiu.github.io/conf-cliondebug/</guid>
-    <description><![CDATA[<p>【CLion】Debug Configuration如何配置（已有项目）</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLion on zli2001</title>
+    <link>http://localhost:1313/tags/clion/</link>
+    <description>Recent content in CLion on zli2001</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 06 May 2022 14:10:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/clion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debug Configuration如何配置（已有项目）</title>
+      <link>http://localhost:1313/conf-cliondebug/</link>
+      <pubDate>Mon, 28 Feb 2022 10:09:58 +0800</pubDate>
+      <guid>http://localhost:1313/conf-cliondebug/</guid>
+      <description>&lt;p&gt;【CLion】Debug Configuration如何配置（已有项目）&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

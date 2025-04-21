@@ -8,7 +8,7 @@
 
 将要隐藏的内容放在\<!--more-->符号后面
 
-(可查看源文件 https://github.com/kliiu/kliiu.github.io/content/posts/readMore.md)
+(可查看源文件 https://github.com/zli2001/zli2001.github.io/content/posts/readMore.md)
 
 官方文档：
 

@@ -1,7 +1,6 @@
 # About
 
 
-{{< music auto="https://music.163.com/#/song?id=27953166" >}}
 
 
 

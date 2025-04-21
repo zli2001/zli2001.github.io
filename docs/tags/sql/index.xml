@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>SQL - Tag - 兰州手卷</title>
-        <link>https://kliiu.github.io/tags/sql/</link>
+        <link>https://zli2001.github.io/tags/sql/</link>
         <description>SQL - Tag - 兰州手卷</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>klliiuuu@outlook.com (兰州手卷)</managingEditor>
-            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://kliiu.github.io/tags/sql/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>klliiuuu@outlook.com (兰州手卷)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</lastBuildDate><atom:link href="https://zli2001.github.io/tags/sql/" rel="self" type="application/rss+xml" /><item>
     <title>SQL and Pandas</title>
-    <link>https://kliiu.github.io/learning-sql_pandas/</link>
+    <link>https://zli2001.github.io/learning-sql_pandas/</link>
     <pubDate>Mon, 25 Apr 2022 10:09:58 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://kliiu.github.io/learning-sql_pandas/</guid>
+    <guid>https://zli2001.github.io/learning-sql_pandas/</guid>
     <description><![CDATA[<p>写pandas时的一点感悟。</p>]]></description>
 </item></channel>
 </rss>
